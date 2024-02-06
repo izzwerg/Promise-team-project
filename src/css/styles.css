@@ -35,6 +35,8 @@
        url('../fonts/dm-sans-v14-latin_latin-ext-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
