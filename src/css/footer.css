@@ -1,0 +1,16 @@
+.footer-info {
+  width: 86px;
+  height: 18px;
+}
+.footer-logo {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -0.02em;
+  color: #f6f6f6;
+}
+.footer-social {
+  width: 132px;
+  height: 36px;
+}
