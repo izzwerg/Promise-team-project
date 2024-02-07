@@ -69,3 +69,34 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.is-hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-visible {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
