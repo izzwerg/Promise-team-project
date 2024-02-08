@@ -1,0 +1,303 @@
+/* MOBILE */
+
+.fav-ex-section {
+    border-radius: 30px;
+    min-width: 335px;
+    max-width: 100%;
+    min-height: 450px;
+    max-height: 1644px;
+    background: #e8e8e8;
+    padding: 20px 20px 23px 20px;
+}
+
+.fav-box {
+    padding: 40px 20px;
+}
+
+.fav-ex-tittle {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #1b1b1b;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.no-fav-ex-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 60px;
+    max-width: 247px;
+}
+
+.dumbbell-img {
+    width: 85px;
+    height: 52px;
+    background-image: url("../img/mobile/dumbbell_mob.png");
+    margin: 0;
+}
+
+.no-fav-text {
+    font-family: "DM Sans",
+        sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    text-align: center;
+    color: #1b1b1b;
+}
+
+.fav-ex-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.fav-ex-item {
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    height: 165px;
+    padding: 16px;
+    margin: 0;
+}
+
+.fav-ex-item-header {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.fav-workout-box {
+    border-radius: 15px;
+    padding: 5px 8px;
+    width: 76px;
+    height: 26px;
+    background: #7e847f;
+    outline: none;
+    border: transparent;
+}
+
+.fav-workout-text {
+    text-transform: uppercase;
+    font-family: "DM Sans",
+        sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #f6f6f6;
+}
+
+.fav-delete-btn {
+    fill: #1b1b1b;
+    margin: 0;
+    margin-left: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+.fav-start-ex-btn {
+    margin-left: 109px;
+    outline: none;
+    background-color: transparent;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #1b1b1b;
+}
+
+.fav-start-arrow-icon {
+    padding-left: 3px;
+    fill: #1b1b1b;
+    margin: 0;
+}
+
+.fav-ex-name-box {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 18px;
+}
+
+.fav-run-icon-box {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 50%;
+    outline: none;
+    border-color: transparent;
+    background: #7e847f;
+    width: 24px;
+    height: 24px;
+}
+
+.fav-run-icon {
+    fill: #f6f6f6;
+    margin: 0;
+}
+
+.fav-ex-name {
+    font-family: "DM Sans",
+        sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #1b1b1b;
+    margin: 0;
+    margin-left: 16px;
+}
+
+.fav-ex-desc-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 6px;
+}
+
+.fav-ex-desc-item {
+    font-family: "DM Sans",
+        sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: rgba(27, 27, 27, 0.4);
+}
+
+.fav-ex-desc-value {
+    font-family: "DM Sans",
+        sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #1b1b1b;
+}
+
+/* MOBILE */
+
+/* MEDIA */
+
+/* RESOLUTION */
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .dumbbell-img {
+        background-image: url(../img/tablet/dumbbell@2x.png);
+    }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+    .dumbbell-img {
+        background-image: url(../img/desktop/dumbbell@2x.png);
+    }
+}
+
+/* RESOLUTION */
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+
+    .fav-ex-section {
+        min-height: 928px;
+        max-height: fit-content;
+    }
+
+    .fav-box {
+        padding: 64px 48px;
+    }
+
+    .fav-ex-tittle {
+        font-size: 44px;
+        line-height: 109%;
+        margin-bottom: 32px;
+    }
+
+    .no-fav-ex-inner {
+        margin-top: 176px;
+        max-width: 554px;
+    }
+
+    .dumbbell-img {
+        width: 115px;
+        height: 71px;
+    }
+
+    .no-fav-text {
+        font-size: 18px;
+        line-height: 133%;
+    }
+
+    .fav-ex-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .fav-ex-item {
+        width: 313px;
+    }
+
+    .fav-start-ex-btn {
+        margin-left: 120px;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .fav-start-arrow-icon {
+        margin-left: 9px;
+    }
+
+    .fav-ex-name {
+        font-size: 24px;
+        line-height: 133%;
+        margin-left: 16px;
+    }
+
+}
+
+/* TABLET */
+
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+
+    .fav-ex-section {
+        min-height: 687px;
+    }
+
+    .no-fav-ex-inner {
+        margin-top: 114px;
+    }
+
+    .fav-ex-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 28px;
+    }
+
+    .fav-ex-item {
+        width: 424px;
+        height: 141px;
+    }
+
+    .fav-start-ex-btn {
+        margin-left: 231px;
+    }
+
+    .fav-ex-desc-list {
+        flex-wrap: nowrap;
+    }
+
+}
+
+/* DESKTOP */
+
+/* MEDIA */
