@@ -2,6 +2,7 @@
 }
 .wrapper-quote-fav {
   padding: 20px;
+  padding-top: 96px;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -132,6 +133,7 @@
 @media screen and (min-width: 768px) {
   .wrapper-quote-fav {
     padding: 16px;
+    padding-top: 180px;
     max-width: 768px;
     min-width: 768px;
     flex-direction: row;
@@ -198,6 +200,7 @@
     background-image: url(../img/desktop/favorites_desk.jpg);
   }
   .wrapper-quote-fav {
+    padding-top: 156px;
     max-width: 1440px;
     min-width: 1440px;
     flex-wrap: nowrap;
