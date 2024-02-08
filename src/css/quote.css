@@ -1,101 +1,261 @@
-
-/*
-.quote-runner-circle {
-    border-radius: 100%;
-
-}
-.quote-runner {
-    fill: "#F6F6F6";
-
-}
-*/
-@media screen and (min-width: 1440px) {
-    .quote-main-sec {
-        margin: 8px 16px;
+ @media screen and (min-width: 1440px) {
+    /*змінити 100 на 8*/
+    .quote-the-day-main{
+        padding: 100px 16px;
+        flex-wrap: nowrap;
+        min-width: 1440px;
+        max-width: 1440px;
+        margin: 0;
+        
     }
+    .quote-with-text {
+        border-radius: 50px;
+        width: 704px;
+        height: 302px;
+        padding: 64px;
+        display: flex;
+        position: relative;
+    
+
+        
+    }
+
+    .quote-photo-main {
+        width: 704px;
+      }
+    
   }
 
-@media screen and (min-width: 768px) {
-    .quote-main-sec {
-        margin: 8px 16px;
-    }
+  @media screen and (min-width: 768px) {
 
-    .background-quote {
-        border-radius: 50px;
-        width: 736px;
-        height: 302px;
-        padding-top: 64px;
-        padding-left: 80px;
-
+    .quote-the-day-main{
+        /*змінити 100 на 8*/
+        padding: 100px 16px;
         display: flex;
-        /*justify-content: center;*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 768px;
+        max-width: 768px;
         margin: 0 auto;
         
+  
+      
+    }
+    .quote-with-text {
+        border-radius: 50px;
+        height: 302px;
+        display: flex;
+        position: relative;
+        padding: 64px 80px;
+        width: 736px;
+
         
     }
-    .quote-runner {
-        margin-right: 16px;
-    }
-
-    .quote-right-main{
+    .quote-quotes-main {
+        right: 80px;
+        top: 32px;
         width: 48px;
         height: 48px;
-    }
+      }
+      .quote-quotes-main svg {
+        width: 48px;
+        height: 48px;
+      }
 
-    .main-quote-of-day {
-        margin-right: 286px;
+      .quote-title-main {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 32px;
         
-    }
-    
+      }
 
-
-}
-
-@media screen and (min-width: 375px) {
-    
-    .quote-main-sec {
-        margin: 10px 20px;
-        padding: 100px 0;
-        
-    }
-    .background-quote {
-        background-color: var(--grey);
-        height: 272px;
-        width: 335px;
-        border-radius: 30px;
-        padding-top: 40px;
-        padding-left: 20px;
-        display: flex;
-        /*justify-content: center;*/
-        margin: 0 auto;
-        
-        
-    }
-
-    .quote-runner {
-        margin-right: 20px;
-    }
-    
-    .main-quote-of-day {
+      .quote-paragraph-main {
         font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.4;
-        color: var(--white);
-        display: inline;
-        margin-right: 54px;
-        
-    }
-    
-    .girl-photo-quote {
-        margin-bottom: 10px;
-        
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(246, 246, 246, 0.6);
+        margin-bottom: 25px;
+        max-height: 100;
+        height: 77px;
 
-    }
-    .girl-main-quote {
-        margin: 0 auto;
-        border-radius: 30px;
-        width: 335px;
-        height: 272px;
+      }
+
+      .quote-photo-main {
+        width: 736px;
+        max-height: 302px;
+        height: 302px;
+        border-radius: 50px;
+      }
+  }
+
+
+@media screen and (min-width: 320px) {
+    
+
+.quote-the-day-main{
+    /*змінити 100 на 10*/
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    /*gap: 0;*/
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.quote-with-text {
+    border-radius: 30px;
+    height: 272px;    
+    background-color: var(--grey);
+    padding: 42px 20px 40px;
+    display: flex;
+    gap: 14px;
+    position: relative;
+    
+}
+
+.quote-runner {
+    fill: var(--white);
+    background-color: rgba(246, 246, 246, 0.1);
+    border-radius: 50%;
+    padding: 6px 7px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+  }
+
+  .quote-quotes-main {
+    fill: var(--white);
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    padding: 0;
+    width: 21.6px;
+    height: 18.1px;
+  }
+
+  .quote-title-main {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--white);
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 14px;
+
+  }
+  .quote-paragraph-main {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(246, 246, 246, 0.6);
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 14px;
+    max-height: 110px;
+    height: 110px;
+    overflow-y: auto;
+
+
+  }
+
+  .quote-paragraph-main::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .quote-paragraph-main::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .quote-paragraph-main::-webkit-scrollbar-thumb {
+    background-color: rgba(246, 246, 246, 0.6);
+    border: none;
+  }
+  .quote-author-main {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    letter-spacing: 0px;
+    text-align: left;
+
+  }
+
+  .quote-photo-main {
+    width: 335px;
+    height: 272px;
+    max-height: 272px;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .quote-main-section {
+}
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*background-image*/
+/*Mobile*/
+@media screen and (min-width: 320px) {
+    .quote-photo-main {
+        background-image: url('../img/mobile/block1_mob.jpg');
     }
 }
+
+@media screen and (min-width: 320px) and (min-resolution: 192dpi) {
+    .quote-photo-main {
+      background-image: url(../img/mobile/block1_mob@2x.jpg);
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    .quote-photo-main {
+      background-image: url(../img/tablet/block1_tab.jpg);
+    }
+}
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .quote-photo-main {
+      background-image: url(../img/tablet/block1_tab@2x.jpg);
+    }
+  }
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+    .quote-photo-main {
+      background-image: url(../img/desktop/block1_desk.jpg);
+    }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+    .quote-photo-main {
+      background-image: url(../img/desktop/block1_desk@2x.jpg);
+    }
+  }
+/*end-of-background-image*/
