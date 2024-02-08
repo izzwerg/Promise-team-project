@@ -20,6 +20,34 @@
         margin: 8px 16px;
     }
 
+    .background-quote {
+        border-radius: 50px;
+        width: 736px;
+        height: 302px;
+        padding-top: 64px;
+        padding-left: 80px;
+
+        display: flex;
+        /*justify-content: center;*/
+        margin: 0 auto;
+        
+        
+    }
+    .quote-runner {
+        margin-right: 16px;
+    }
+
+    .quote-right-main{
+        width: 48px;
+        height: 48px;
+    }
+
+    .main-quote-of-day {
+        margin-right: 286px;
+        
+    }
+    
+
 
 }
 
@@ -27,6 +55,7 @@
     
     .quote-main-sec {
         margin: 10px 20px;
+        padding: 100px 0;
         
     }
     .background-quote {
@@ -34,11 +63,39 @@
         height: 272px;
         width: 335px;
         border-radius: 30px;
-        padding: 40px 20px;
+        padding-top: 40px;
+        padding-left: 20px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        /*justify-content: center;*/
+        margin: 0 auto;
+        
+        
+    }
 
+    .quote-runner {
+        margin-right: 20px;
     }
     
+    .main-quote-of-day {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--white);
+        display: inline;
+        margin-right: 54px;
+        
+    }
+    
+    .girl-photo-quote {
+        margin-bottom: 10px;
+        
+
+    }
+    .girl-main-quote {
+        margin: 0 auto;
+        border-radius: 30px;
+        width: 335px;
+        height: 272px;
+    }
 }
