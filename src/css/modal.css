@@ -1,11 +1,11 @@
-.section_modal {
-    display: none;
+/* .section_modal {
+    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 732px;
-    height: 470px;
+    height: auto;
     background-color: var(--white);
     border-radius: 20px;
     padding: 40px;
@@ -47,7 +47,7 @@
 }
 
 .stars .icon:nth-child(n+5) {
-    fill: var(--white);
+    fill: rgb(27, 27, 27, 0.2);
 }
 
 .icon {
@@ -142,7 +142,7 @@
 }
 
 .overlay {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -150,4 +150,232 @@
     height: 100%;
     background-color: rgb(27, 27, 27, 0.6);
     z-index: 1;
+} */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section_modal {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 20px;
+    z-index: 2;
+    overflow: auto;
+    margin: auto;
+}
+
+.container_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 295px;
+    padding: 40px 20px;
+}
+
+.gif {
+    width: 295px;
+    height: 258px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.info {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.raiting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.raiting p {
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    fill: var(--orange);
+    gap: 2px;
+}
+
+.stars .icon:nth-child(n+5) {
+    fill: rgb(27, 27, 27, 0.2);
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}
+
+.info_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.info_list::before,
+.info_list::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgb(27, 27, 27, 0.2);
+}
+
+.info_list::before {
+    top: -10px;
+}
+
+.info_list::after {
+    bottom: -10px;
+}
+
+.info_el_title {
+    font-size: 12px;
+    line-height: 1.5em;
+    color: rgb(27, 27, 27, 0.6);
+}
+
+.info_el_text {
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.2em;
+    color: rgb(27, 27, 27, 0.6);
+}
+
+
+.addToFavorites {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--grey);
+    transition: background-color 0.3s ease;
+}
+
+.addToFavorites:active {
+    background-color: var(--dark-grey);
+}
+
+.addToFavorites .icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    stroke: var(--white);
+    fill: var(--grey);
+}
+
+.deletedForFavorites {
+    display: none;
+}
+
+.exitModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: 0;
+    background-color: var(--white);
+    width: 24px;
+    height: 24px;
+}
+
+.exitModal .icon {
+    stroke: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+    .section_modal {
+        left: 26px;
+        right: 26px;
+    }
+
+    .container_modal {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 716px;
+        padding: 40px;
+    }
+
+    .gif {
+        margin-right: 24px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .raiting p {
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .addToFavorites {
+        padding: 12px 24px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .section_modal {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 732px;
+        height: 470px;
+        overflow: hidden;
+    }
 }
