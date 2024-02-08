@@ -1,0 +1,153 @@
+.section_modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 732px;
+    height: 470px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    z-index: 2;
+}
+
+.gif {
+    margin-right: 40px;
+    width: 270px;
+    height: 259px;
+    border-radius: 12px;
+}
+
+.title {
+    margin-bottom: 8px;
+}
+
+.raiting {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 24px;
+    gap: 2px;
+}
+
+.raiting p {
+    font-size: 12px;
+    align-items: start;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    fill: var(--orange);
+    gap: 2px;
+}
+
+.stars .icon:nth-child(n+5) {
+    fill: var(--white);
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}
+
+.info_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.info_list::before,
+.info_list::after {
+    content: '';
+    position: absolute;
+    width: 342px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgb(27, 27, 27, 0.2);
+}
+
+.info_list::before {
+    top: -8px;
+}
+
+.info_list::after {
+    bottom: -8px;
+}
+
+.info_el_title {
+    font-size: 12px;
+    line-height: 1.5em;
+    color: rgb(27, 27, 27, 0.6);
+
+}
+
+.info_el_text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.2em;
+    color: rgb(27, 27, 27, 0.6);
+}
+
+.addToFavorites {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--grey);
+    transition: background-color 0.3s ease;
+}
+
+.addToFavorites:hover {
+    background-color: var(--dark-grey);
+}
+
+.deletedForFavorites {
+    display: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--grey);
+    transition: background-color 0.3s ease;
+}
+
+.deletedForFavorites:hover {
+    background-color: var(--dark-grey);
+}
+
+.exitModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: 0;
+    background-color: var(--white);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(27, 27, 27, 0.6);
+    z-index: 1;
+}
