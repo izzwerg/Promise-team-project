@@ -91,7 +91,7 @@
   background-size: cover;
 }
 .quote-fav-recommendation {
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: 30px;
   padding: 100px;
   max-height: 272px;
