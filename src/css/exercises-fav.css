@@ -113,6 +113,7 @@
     stroke: #1b1b1b;
     margin: 0;
     margin-left: 8px;
+    padding: 0;
     border: none;
     background-color: transparent;
 }
@@ -134,9 +135,10 @@
 }
 
 .fav-start-arrow-icon {
-    padding-left: 3px;
-    stroke: #1b1b1b;
     margin: 0;
+    padding: 0;
+    margin-left: 3px;
+    stroke: #1b1b1b;
 }
 
 .fav-ex-name-box {
@@ -310,7 +312,7 @@
     }
 
     .fav-start-arrow-icon {
-        padding-left: 8px;
+        margin-left: 8px;
         width: 16px;
         height: 16px;
     }
