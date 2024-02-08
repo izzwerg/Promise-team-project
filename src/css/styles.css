@@ -73,7 +73,10 @@
 .container {
   min-width: 320px;
   max-width: 375px;
+  width: 100%;
   padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
