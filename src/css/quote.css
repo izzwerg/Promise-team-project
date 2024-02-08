@@ -1,0 +1,44 @@
+
+/*
+.quote-runner-circle {
+    border-radius: 100%;
+
+}
+.quote-runner {
+    fill: "#F6F6F6";
+
+}
+*/
+@media screen and (min-width: 1440px) {
+    .quote-main-sec {
+        margin: 8px 16px;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    .quote-main-sec {
+        margin: 8px 16px;
+    }
+
+
+}
+
+@media screen and (min-width: 375px) {
+    
+    .quote-main-sec {
+        margin: 10px 20px;
+        
+    }
+    .background-quote {
+        background-color: var(--grey);
+        height: 272px;
+        width: 335px;
+        border-radius: 30px;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+}
