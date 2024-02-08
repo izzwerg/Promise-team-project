@@ -126,6 +126,7 @@
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 999;
 }
 
 .backdrop-menu {
