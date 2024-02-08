@@ -264,7 +264,6 @@
 @media screen and (min-width: 768px) {
 
     .fav-ex-section {
-        min-height: 928px;
         max-height: fit-content;
     }
 
@@ -341,10 +340,6 @@
 /* DESKTOP */
 
 @media screen and (min-width: 1440px) {
-
-    .fav-ex-section {
-        min-height: 687px;
-    }
 
     .no-fav-ex-inner {
         margin-top: 114px;
