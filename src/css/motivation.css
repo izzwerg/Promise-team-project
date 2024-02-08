@@ -1,0 +1,85 @@
+/* Mobile */
+.motivation-image-block {
+    border-radius: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.motivation-text-block {
+    display: flex;
+    gap: 18px;
+    padding: 40px 20px;
+    border-radius: 30px;
+    background: #1B1B1B;
+}
+
+.motivation-icon-block {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(246, 246, 246, 0.1);
+    border-radius: 50%;
+}
+
+.motivation-svg {
+    width: 20px;
+    height: 20px;
+    fill: #F6F6F6;
+}
+
+.motivation-headline {
+    padding-bottom: 2px;
+    color: #F6F6F6;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.motivation-paragraph-item {
+    color: rgba(246, 246, 246, 0.6);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.motivation-paragraph-item.first-p {
+    padding-bottom: 14px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .motivation-image-block {
+        border-radius: 50px;
+    }
+
+    .motivation-text-block {
+        padding: 64px;
+        border-radius: 50px;
+    }
+
+    .motivation-headline {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    .motivation-paragraph-item.first-p {
+        padding-bottom: 25px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .motivation-paragraph-item.second-p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* Desktop 1440 */
+@media screen and (min-width: 1440px) {
+    .container.motivation-container {
+        display: flex;
+    }
+}
