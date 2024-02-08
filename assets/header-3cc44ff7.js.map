@@ -1,1 +1,0 @@
-{"version":3,"file":"header-3cc44ff7.js","sources":["../../src/js/header.js"],"sourcesContent":["const openButton = document.querySelector(\".head-button\");"],"names":[],"mappings":"ssBAAmB,SAAS,cAAc,cAAc"}
