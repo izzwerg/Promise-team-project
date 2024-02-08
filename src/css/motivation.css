@@ -1,6 +1,7 @@
 /* Mobile */
 .motivation-container {
     min-width: 320px;
+    margin-bottom: 20px;
 }
 
 .motivation-image-block {
@@ -25,7 +26,6 @@
     display: flex;
     gap: 18px;
     padding: 40px 20px;
-    margin-bottom: 20px;
     border-radius: 30px;
     background: #1B1B1B;
 }
@@ -67,6 +67,10 @@
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+    .motivation-container {
+        margin-bottom: 16px;
+    }
+
     .motivation-image-block {
         width: 736px;
         height: 302px;
@@ -83,7 +87,6 @@
     .motivation-text-block {
         padding: 64px;
         border-radius: 50px;
-        margin-bottom: 16px;
     }
 
     .motivation-headline {
