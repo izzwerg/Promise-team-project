@@ -1,17 +1,16 @@
 /* MOBILE */
 
 .fav-ex-section {
-    border-radius: 30px;
     min-width: 335px;
     max-width: 100%;
     min-height: 450px;
-    max-height: 1644px;
-    background: #e8e8e8;
     padding: 20px 20px 23px 20px;
 }
 
 .fav-box {
     padding: 40px 20px;
+    border-radius: 30px;
+    background: #e8e8e8;
 }
 
 .fav-ex-tittle {
@@ -218,7 +217,7 @@
     justify-content: center;
 }
 
-.fav-pagination-btn:focus {
+.fav-pagination-btn-focus {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,6 +233,23 @@
     letter-spacing: 0.04em;
     color: #1b1b1b;
 }
+
+/* .fav-pagination-btn:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1b1b1b;
+    border-radius: 18px;
+    padding: 0px 12px;
+    width: 31px;
+    height: 32px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #1b1b1b;
+} */
 
 /* MOBILE */
 
