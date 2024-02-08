@@ -4,7 +4,8 @@
     min-width: 335px;
     max-width: 100%;
     min-height: 450px;
-    padding: 20px 20px 23px 20px;
+    margin-bottom: 16px;
+    /* padding: 20px 20px 23px 20px; */
 }
 
 .fav-box {
@@ -299,7 +300,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 14px;
-        margin-bottom: 20px;
     }
 
     .fav-ex-item {
@@ -359,7 +359,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
-        margin-bottom: 28px;
     }
 
     .fav-ex-item {
