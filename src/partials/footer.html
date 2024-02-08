@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="container footer-container">
+  <div class="footer-container">
     <div class="footer-info">
       <a href="../index.html" class="footer-logo">energy.flow</a>
     </div>
@@ -38,10 +38,11 @@
           </a>
         </li>
       </ul>
-
-      <p class="footer-text">
-        Transforming your <span class="footer-text-accent">body</span>shape with
-        us
+    </div>
+    <div class="footer-text">
+      <p>
+        Transforming your <span class="footer-text-accent">body</span> shape
+        with us
       </p>
     </div>
     <div class="footer-subscribe">
@@ -52,8 +53,10 @@
         <label class="footer-label">
           <input
             class="footer-input"
+            id="user-submit"
             type="email"
             name="email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
             placeholder="Email"
         /></label>
         <button class="footer-button" type="submit">Send</button>
@@ -61,9 +64,7 @@
     </div>
     <div class="footer-privacy">
       <p class="footer-privacy-text">Energy Flow. All rights reserved.</p>
-      <p class="footer-privacy-text-second">
-        Privacy Policy / Terms of Service
-      </p>
+      <p class="footer-policy-text">Privacy Policy / Terms of Service</p>
     </div>
   </div>
 </footer>
