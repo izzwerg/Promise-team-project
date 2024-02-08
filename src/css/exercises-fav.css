@@ -31,6 +31,7 @@
     justify-content: center;
     align-items: center;
     gap: 28px;
+    margin: 0 auto;
     margin-top: 60px;
     max-width: 247px;
 }
@@ -39,6 +40,7 @@
     width: 85px;
     height: 52px;
     background-image: url("../img/mobile/dumbbell_mob.png");
+    background-repeat: no-repeat;
     margin: 0;
 }
 
@@ -57,6 +59,9 @@
     flex-direction: column;
     gap: 20px;
     list-style-type: none;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .fav-ex-item {
@@ -66,10 +71,19 @@
     height: 165px;
     padding: 16px;
     margin: 0;
+    background-color: #fff;
+    border: 1px solid rgba(246, 246, 246, 0.2);
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+.fav-ex-item-desk {
+    display: none;
 }
 
 .fav-ex-item-header {
     display: flex;
+    align-items: center;
     margin-bottom: 25px;
 }
 
@@ -96,7 +110,8 @@
 }
 
 .fav-delete-btn {
-    fill: #1b1b1b;
+    fill: #fff;
+    stroke: #1b1b1b;
     margin: 0;
     margin-left: 8px;
     border: none;
@@ -110,16 +125,18 @@
     margin-left: 109px;
     outline: none;
     background-color: transparent;
+    border-color: transparent;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 129%;
     color: #1b1b1b;
+    padding: 0;
 }
 
 .fav-start-arrow-icon {
     padding-left: 3px;
-    fill: #1b1b1b;
+    stroke: #1b1b1b;
     margin: 0;
 }
 
@@ -127,7 +144,7 @@
     display: flex;
     justify-content: start;
     align-items: start;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 .fav-run-icon-box {
@@ -143,7 +160,7 @@
 }
 
 .fav-run-icon {
-    fill: #f6f6f6;
+    fill: #fff;
     margin: 0;
 }
 
@@ -156,13 +173,14 @@
     color: #1b1b1b;
     margin: 0;
     margin-left: 16px;
+    text-wrap: nowrap;
 }
 
 .fav-ex-desc-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 6px;
+    gap: 6px;
+    align-items: flex-end;
 }
 
 .fav-ex-desc-item {
@@ -181,27 +199,45 @@
     font-size: 12px;
     line-height: 150%;
     color: #1b1b1b;
+    margin-right: 10px;
+}
+
+.fav-pagination-btn {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: rgba(27, 27, 27, 0.4);
+    border: none;
+    background-color: transparent;
+}
+
+.fav-pag-btn-set {
+    display: flex;
+    justify-content: center;
+}
+
+.fav-pagination-btn:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1b1b1b;
+    border-radius: 18px;
+    padding: 0px 12px;
+    width: 31px;
+    height: 32px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    color: #1b1b1b;
 }
 
 /* MOBILE */
 
 /* MEDIA */
-
-/* RESOLUTION */
-
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-    .dumbbell-img {
-        background-image: url(../img/tablet/dumbbell@2x.png);
-    }
-}
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-    .dumbbell-img {
-        background-image: url(../img/desktop/dumbbell@2x.png);
-    }
-}
-
-/* RESOLUTION */
 
 /* TABLET */
 
@@ -230,6 +266,8 @@
     .dumbbell-img {
         width: 115px;
         height: 71px;
+        background-image: url("../img/tablet/dumbbell.png");
+        background-size: contain;
     }
 
     .no-fav-text {
@@ -256,7 +294,9 @@
     }
 
     .fav-start-arrow-icon {
-        margin-left: 9px;
+        padding-left: 8px;
+        width: 16px;
+        height: 16px;
     }
 
     .fav-ex-name {
@@ -265,6 +305,16 @@
         margin-left: 16px;
     }
 
+    .fav-pag-btn-set {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .dumbbell-img {
+        background-image: url(../img/tablet/dumbbell@2x.png);
+    }
 }
 
 /* TABLET */
@@ -281,6 +331,10 @@
         margin-top: 114px;
     }
 
+    .dumbbell-img {
+        background-image: url("../img/desktop/dumbbell.png");
+    }
+
     .fav-ex-list {
         display: flex;
         flex-direction: row;
@@ -294,6 +348,10 @@
         height: 141px;
     }
 
+    .fav-ex-item-desk {
+        display: flex;
+    }
+
     .fav-start-ex-btn {
         margin-left: 231px;
     }
@@ -302,6 +360,16 @@
         flex-wrap: nowrap;
     }
 
+    .fav-pag-btn-set {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+    .dumbbell-img {
+        background-image: url(../img/desktop/dumbbell@2x.png);
+    }
 }
 
 /* DESKTOP */
