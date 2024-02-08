@@ -8,7 +8,7 @@
 }
 
 .fav-box {
-    padding: 40px 20px;
+    padding: 40px 0;
     border-radius: 30px;
     background: #e8e8e8;
 }
@@ -21,7 +21,7 @@
     letter-spacing: -0.02em;
     color: #1b1b1b;
     margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 20px;
 }
 
 .no-fav-ex-inner {
@@ -268,13 +268,13 @@
     }
 
     .fav-box {
-        padding: 64px 48px;
+        padding: 64px 0;
     }
 
     .fav-ex-tittle {
         font-size: 44px;
         line-height: 109%;
-        margin-bottom: 32px;
+        margin: 0 0 32px 48px;
     }
 
     .no-fav-ex-inner {
