@@ -217,6 +217,7 @@
 .fav-pag-btn-set {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .fav-pagination-btn-focus {
@@ -376,10 +377,6 @@
 
     .fav-ex-desc-list {
         flex-wrap: nowrap;
-    }
-
-    .fav-pag-btn-set {
-        display: flex;
     }
 
 }
