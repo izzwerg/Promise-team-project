@@ -1,12 +1,12 @@
 @media screen and (min-width: 320px) {
-
+.quote-main-section {
+    padding-bottom: 20px;
+}
 .quote-the-day-main{
-    /*змінити 100 на 10*/
-    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     min-width: 320px;
-    max-width: 375px;
+    max-width: 335px;
     margin: 0 auto;
 }
 
@@ -64,7 +64,6 @@
     color: rgba(246, 246, 246, 0.6);
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 14px;
     max-height: 110px;
     height: 110px;
     overflow-y: auto;
@@ -92,6 +91,7 @@
     color: var(--white);
     letter-spacing: 0px;
     text-align: left;
+    margin-top: 14px;
 
   }
 
@@ -112,9 +112,12 @@
 
 @media screen and (min-width: 768px) {
 
+    .quote-main-section {
+        padding-bottom: 16px;
+    }
+
     .quote-the-day-main{
-        /*змінити 100 на 8*/
-        padding: 8px 16px;
+        padding: 0 16px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -159,10 +162,11 @@
         font-size: 16px;
         line-height: 24px;
         color: rgba(246, 246, 246, 0.6);
-        margin-bottom: 25px;
-        max-height: 100;
         height: 77px;
-
+        max-height: 77;
+      }
+      .quote-author-main {
+        margin-top: 25px;
       }
 
       .quote-photo-main {
@@ -175,9 +179,11 @@
 
 
 @media screen and (min-width: 1440px) {
-    /*змінити 100 на 8*/
+
+    .quote-main-section {
+        padding-bottom: 16px;
+    }
     .quote-the-day-main{
-        padding: 8px 16px;
         flex-wrap: nowrap;
         min-width: 1440px;
         max-width: 1440px;
@@ -199,6 +205,7 @@
     .quote-photo-main {
         width: 704px;
       }
+      
     
   }
 
