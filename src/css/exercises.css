@@ -1,28 +1,31 @@
 /* MOBILE EXRECISES */
-/* @media screen and (max-width: 767.9px) {
+@media screen and (max-width: 767.9px) {
     .container {
         min-width: 335px;
         max-width: 100%;
-        min-height: 2252px;
     }
 
     .exercises-section {
-        min-width: 335px;
-        max-width: 100%;
-        min-height: 2252px;
         margin-bottom: 16px;
+    }
+
+    .exercises-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
         background-color: var(--light-grey);
         border-radius: 30px;
-
-
     }
 
     .exercises-title {
         color: var(--black);
         font-size: 32px;
         font-weight: 400;
-        letter-spacing: -2%;
-        text-align: center;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        text-align: left;
     }
 
     .button-exercises {
@@ -30,17 +33,19 @@
         align-items: center;
         justify-content: flex-start;
         gap: 6px;
+        margin-bottom: 20px;
     }
 
     .exercises-category {
         background-color: var(--white);
+        color: var(--black);
         border-radius: 30px;
         padding: 7px 14px 7px 14px;
         border: none;
         font-size: 14px;
         font-weight: 400;
-        color: var(--black);
-
+        line-height: 18px;
+        letter-spacing: 0px;
 
     }
 
@@ -50,20 +55,13 @@
 
     }
 
-    .exercises-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
-        padding: 40px 20px;
-    }
 
     .muscles-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        row-gap: 14px;
-        column-gap: 14px;
+        row-gap: 20px;
+
     }
 
     .muscle-item {
@@ -100,7 +98,7 @@
     }
 
     .muscle-category {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0px;
@@ -143,24 +141,30 @@
         width: 32px;
         height: 32px;
     }
-} */
+}
 
 /* TABLET EXRECISES*/
 
 @media screen and (min-width: 768px) {
-    .exercises-section {
+
+
+    .exercises-wrapper {
         background-color: var(--light-grey);
         border-radius: 50px;
-
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 64px 32px;
+        margin-bottom: 16px;
     }
-
 
     .exercises-title {
         color: var(--black);
         font-size: 44px;
         font-weight: 400;
-        letter-spacing: -2%;
+        line-height: 48px;
+        letter-spacing: -0.02em;
         text-align: left;
     }
 
@@ -173,12 +177,13 @@
 
     .exercises-category {
         background-color: var(--white);
+        color: var(--black);
         border-radius: 30px;
         padding: 10px 20px 10px 20px;
         border: none;
         font-size: 16px;
         font-weight: 400;
-        color: var(--black);
+        line-height: 24px;
         letter-spacing: 0px;
 
     }
@@ -189,26 +194,18 @@
 
     }
 
-    .exercises-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
-        padding: 64px 32px;
-        margin-bottom: 16px;
-    }
 
     .muscles-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         row-gap: 14px;
         column-gap: 14px;
     }
 
     .muscle-item {
         /* width: 100%; */
-        width: calc(50% - 20px);
+        width: calc(50% - 8px);
         display: flex;
 
         align-items: center;
@@ -290,18 +287,23 @@
 
 
 @media screen and (min-width: 1440px) {
-    .exercises-section {
+
+    .exercises-wrapper {
         background-color: var(--light-grey);
         border-radius: 50px;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 64px 32px;
     }
-
 
     .exercises-title {
         color: var(--black);
         font-size: 44px;
+        line-height: 48px;
         font-weight: 400;
-        letter-spacing: -2%;
+        letter-spacing: -0.02em;
         text-align: left;
     }
 
@@ -314,12 +316,13 @@
 
     .exercises-category {
         background-color: var(--white);
+        color: var(--black);
         border-radius: 30px;
         padding: 10px 20px 10px 20px;
         border: none;
         font-size: 16px;
         font-weight: 400;
-        color: var(--black);
+        line-height: 24px;
         letter-spacing: 0px;
 
     }
@@ -330,13 +333,7 @@
 
     }
 
-    .exercises-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
-        padding: 64px 32px;
-    }
+
 
     .muscles-list {
         display: flex;
