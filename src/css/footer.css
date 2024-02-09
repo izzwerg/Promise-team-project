@@ -38,10 +38,6 @@
   .footer-text {
     font-size: 64px;
     line-height: 97%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 360px;
   }
 }
 
@@ -191,10 +187,6 @@
     font-size: 54px;
     line-height: 93%;
     max-width: 345px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 64px;
   }
   .footer-social {
     width: 156px;
