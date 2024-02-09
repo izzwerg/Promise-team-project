@@ -59,12 +59,12 @@
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-list:hover,
-.footer-social-list:focus {
+.footer-social-link:hover,
+.footer-social-link:focus {
   border: 1px solid rgba(95, 101, 96, 0.2);
 }
-.footer-social-list:hover .footer-social-icon,
-.footer-social-list:focus .footer-social-icon {
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
   fill: var(--dark-grey);
 }
 .footer-social-icon {
