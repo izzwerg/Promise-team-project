@@ -27,7 +27,15 @@
       ),
       url(../img/desktop/footer_desk.jpg);
   }
+  .footer-container {
+    padding-top: 64px;
+    padding-bottom: 26px;
+  }
 
+  .footer-block-second {
+    display: flex;
+    margin-left: 156px;
+  }
   .footer-info {
     width: 150px;
     height: 28px;
@@ -40,6 +48,12 @@
   .footer-text {
     font-size: 64px;
     line-height: 97%;
+  }
+  .footer-subscribe {
+    margin-left: 160px;
+  }
+  .footer-privacy {
+    margin-left: 486px;
   }
 }
 
@@ -172,9 +186,15 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  .footer-container {
+    padding-top: 66px;
+    padding-bottom: 32px;
+  }
 
+  .footer-block-second {
+    margin-left: 139px;
+  }
   .footer-info {
-    margin-top: 66px;
     margin-bottom: 30px;
     width: 150px;
     height: 28px;
@@ -221,7 +241,7 @@
   .footer-privacy {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 150px 0 150px;
+    margin-left: 150px;
   }
   .footer-policy-text {
     margin-left: 32px;
