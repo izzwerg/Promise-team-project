@@ -118,8 +118,8 @@
   outline: none;
   border: 1px solid #000;
 }
-.footer-label::placeholder:hover,
-.footer-label::placeholder:focus {
+.footer-input::placeholder:hover,
+.footer-input::placeholder:focus {
   color: #1b1b1b;
 }
 .footer-button {
