@@ -5,7 +5,6 @@
   margin-top: 20px;
 }
 .hero-bg {
-
   position: relative;
   width: 335px;
   height: 387px;
@@ -114,6 +113,7 @@
   .hero-bg {
     width: 248px;
     height: 884px;
+    margin-bottom: 16px;
   }
   .hero-content {
     height: 884px;
@@ -156,6 +156,7 @@
   .hero-bg {
     width: 704px;
     height: 884px;
+    margin-bottom: 16px;
   }
   .hero-content {
     height: 884px;
