@@ -21,6 +21,7 @@
     bottom: 20px;
     width: calc(100% - 40px);
     height: calc(100% - 40px);
+    height: max-content;
     max-height: 824px;
     max-width: 335px;
     background-color: var(--white);
@@ -36,7 +37,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 295px;
+    width: 335px;
     padding: 40px 20px;
 }
 
@@ -226,7 +227,6 @@
 @media screen and (min-width: 1440px) {
     .section_modal {
         max-width: 732px;
-        height: 100%;
         max-height: 470px;
         overflow: hidden;
     }
