@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Promise-team-project/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorites</title>
     <link
       rel="stylesheet"
@@ -15,13 +14,15 @@
     />
     
     
-  <script type="module" crossorigin src="/Promise-team-project/assets/header-8eca675f.js"></script>
-  <link rel="stylesheet" href="/Promise-team-project/assets/header-067020d1.css">
-  <link rel="stylesheet" href="/Promise-team-project/assets/favorites-1fc64e11.css">
-</head>
+    <script type="module" crossorigin src="/Promise-team-project/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/header-8eca675f.js">
+    <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/vendor-0cb09735.js">
+    <link rel="stylesheet" href="/Promise-team-project/assets/header-067020d1.css">
+    <link rel="stylesheet" href="/Promise-team-project/assets/favorites-1fc64e11.css">
+  </head>
 
-<body>
-  <header class="container head-position">
+  <body>
+    <header class="container head-position">
   <div class="head-style">
     <a class="head-logo" href="index.html">energy.flow</a>
     <nav class="head-nav">
@@ -117,7 +118,7 @@
 </div>
 
 
-  <section class="section-quote-fav">
+    <section class="section-quote-fav">
   <div class="wrapper-quote-fav">
     <div class="block-with-quote-fav">
       <div class="icon-quote-fav-runner">
@@ -132,12 +133,8 @@
       </div>
       <div>
         <h3 class="quote-fav-title">Quote of the day</h3>
-        <p class="quote-fav-text">
-          A lot of times I find that people who are blessed with the most talent
-          don't ever develop that attitude, and the ones who aren't blessed in
-          that way are the most competitive and have the biggest heart.
-        </p>
-        <p class="quote-fav-author">Tom Brady</p>
+        <p id="quote-text" class="quote-fav-text"></p>
+        <p id="quote-author" class="quote-fav-author"></p>
       </div>
     </div>
 
@@ -155,7 +152,7 @@
   </div>
 </section>
 
-  <section class="fav-ex-section container">
+    <section class="fav-ex-section container">
     <div class="fav-box">
         <h2 class="fav-ex-tittle">Favorites</h2>
         <!-- <div class="no-fav-ex-inner">
@@ -499,9 +496,9 @@
         </div>
     </div>
 </section>
-  
-  
-  
-</body>
-
+    
+    
+    
+    
+  </body>
 </html>
