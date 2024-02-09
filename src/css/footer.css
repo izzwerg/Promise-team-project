@@ -236,6 +236,7 @@
   .footer-text {
     font-size: 64px;
     line-height: 97%;
+    max-width: 488px;
   }
   .footer-subscribe {
     margin-left: 160px;
