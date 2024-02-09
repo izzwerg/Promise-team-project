@@ -230,4 +230,8 @@
         max-height: 470px;
         overflow: hidden;
     }
+
+    .container_modal {
+        max-width: 732px;
+    }
 }
