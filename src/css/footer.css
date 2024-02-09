@@ -198,7 +198,7 @@
   .footer-privacy {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 149px;
+    margin-left: 100px;
   }
   .footer-privacy-text {
     font-size: 14px;
@@ -243,6 +243,6 @@
     margin-left: 160px;
   }
   .footer-privacy {
-    margin-left: 335px;
+    margin-left: 485px;
   }
 }
