@@ -50,8 +50,7 @@
     margin-left: 160px;
   }
   .footer-privacy {
-    display: flex;
-    flex-wrap: wrap;
+    margin-left: 335px;
   }
 }
 
@@ -233,7 +232,9 @@
   .footer-privacy {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 150px;
+  }
+  .footer-privacy-text {
+    margin-left: 149px;
   }
   .footer-policy-text {
     margin-left: 32px;
