@@ -22,6 +22,7 @@
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     max-height: 824px;
+    max-width: 335px;
     background-color: var(--white);
     border-radius: 20px;
     z-index: 2;
@@ -51,7 +52,6 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 
 .title {
