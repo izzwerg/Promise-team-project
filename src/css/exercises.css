@@ -1,0 +1,427 @@
+/* MOBILE EXRECISES */
+/* @media screen and (max-width: 767.9px) {
+    .container {
+        min-width: 335px;
+        max-width: 100%;
+        min-height: 2252px;
+    }
+
+    .exercises-section {
+        min-width: 335px;
+        max-width: 100%;
+        min-height: 2252px;
+        margin-bottom: 16px;
+        background-color: var(--light-grey);
+        border-radius: 30px;
+
+
+    }
+
+    .exercises-title {
+        color: var(--black);
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: -2%;
+        text-align: center;
+    }
+
+    .button-exercises {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+    }
+
+    .exercises-category {
+        background-color: var(--white);
+        border-radius: 30px;
+        padding: 7px 14px 7px 14px;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--black);
+
+
+    }
+
+    .exercises-category.active {
+        background-color: var(--grey);
+        color: var(--white);
+
+    }
+
+    .exercises-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 40px 20px;
+    }
+
+    .muscles-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 14px;
+        column-gap: 14px;
+    }
+
+    .muscle-item {
+        width: 100%;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        background-image: linear-gradient(rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0.7)), url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
+        border-radius: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+
+    }
+
+    .muscle-item::before {
+        padding-top: 80%;
+        display: block;
+        content: "";
+        z-index: 2;
+    }
+
+    .muscle-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2px;
+
+    }
+
+    .muscle-category {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: var(--white);
+        word-wrap: break-word;
+        text-align: center;
+
+    }
+
+    .muscle-item-category {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: rgba(246, 246, 246, 0.4)
+    }
+
+    .pagination-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: var(--black);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .pagination-number {
+        color: rgba(27, 27, 27, 0.4);
+    }
+
+    .pagination-number.active {
+        color: var(--black);
+        border: 1px solid rgb(27, 27, 27);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+} */
+
+/* TABLET EXRECISES*/
+
+@media screen and (min-width: 768px) {
+    .exercises-section {
+        background-color: var(--light-grey);
+        border-radius: 50px;
+
+
+    }
+
+
+    .exercises-title {
+        color: var(--black);
+        font-size: 44px;
+        font-weight: 400;
+        letter-spacing: -2%;
+        text-align: left;
+    }
+
+    .button-exercises {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .exercises-category {
+        background-color: var(--white);
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--black);
+        letter-spacing: 0px;
+
+    }
+
+    .exercises-category.active {
+        background-color: var(--grey);
+        color: var(--white);
+
+    }
+
+    .exercises-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 64px 32px;
+        margin-bottom: 16px;
+    }
+
+    .muscles-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 14px;
+        column-gap: 14px;
+    }
+
+    .muscle-item {
+        /* width: 100%; */
+        width: calc(50% - 20px);
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        background-image: linear-gradient(rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0.7)), url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
+        border-radius: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+
+    }
+
+    .muscle-item::before {
+        padding-top: 80%;
+        display: block;
+        content: "";
+        z-index: 2;
+    }
+
+    .muscle-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2px;
+
+    }
+
+    .muscle-category {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: var(--white);
+        word-wrap: break-word;
+        text-align: center;
+
+    }
+
+    .muscle-item-category {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: rgba(246, 246, 246, 0.4)
+    }
+
+    .pagination-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: var(--black);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .pagination-number {
+        color: rgba(27, 27, 27, 0.4);
+    }
+
+    .pagination-number.active {
+        color: var(--black);
+        border: 1px solid rgb(27, 27, 27);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* DESKTOP EXRECISES*/
+
+
+@media screen and (min-width: 1440px) {
+    .exercises-section {
+        background-color: var(--light-grey);
+        border-radius: 50px;
+
+    }
+
+
+    .exercises-title {
+        color: var(--black);
+        font-size: 44px;
+        font-weight: 400;
+        letter-spacing: -2%;
+        text-align: left;
+    }
+
+    .button-exercises {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .exercises-category {
+        background-color: var(--white);
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--black);
+        letter-spacing: 0px;
+
+    }
+
+    .exercises-category.active {
+        background-color: var(--grey);
+        color: var(--white);
+
+    }
+
+    .exercises-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 64px 32px;
+    }
+
+    .muscles-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        row-gap: 40px;
+    }
+
+    .muscle-item {
+        /* width: 100%; */
+        width: calc(25% - 20px);
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        background-image: linear-gradient(rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0.7)), url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
+        border-radius: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+
+    }
+
+    .muscle-item::before {
+        padding-top: 80%;
+        display: block;
+        content: "";
+        z-index: 2;
+    }
+
+    .muscle-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2px;
+
+    }
+
+    .muscle-category {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: var(--white);
+        word-wrap: break-word;
+        text-align: center;
+
+    }
+
+    .muscle-item-category {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: rgba(246, 246, 246, 0.4)
+    }
+
+    .pagination-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: var(--black);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .pagination-number {
+        color: rgba(27, 27, 27, 0.4);
+    }
+
+    .pagination-number.active {
+        color: var(--black);
+        border: 1px solid rgb(27, 27, 27);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+}
