@@ -226,7 +226,7 @@
 
 @media screen and (min-width: 1440px) {
     .section_modal {
-        max-width: 732px;
+        width: 732px;
         max-height: 470px;
         overflow: hidden;
     }
