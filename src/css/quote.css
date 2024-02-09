@@ -1,104 +1,10 @@
- @media screen and (min-width: 1440px) {
-    /*змінити 100 на 8*/
-    .quote-the-day-main{
-        padding: 100px 16px;
-        flex-wrap: nowrap;
-        min-width: 1440px;
-        max-width: 1440px;
-        margin: 0;
-        
-    }
-    .quote-with-text {
-        border-radius: 50px;
-        width: 704px;
-        height: 302px;
-        padding: 64px;
-        display: flex;
-        position: relative;
-    
-
-        
-    }
-
-    .quote-photo-main {
-        width: 704px;
-      }
-    
-  }
-
-  @media screen and (min-width: 768px) {
-
-    .quote-the-day-main{
-        /*змінити 100 на 8*/
-        padding: 100px 16px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-width: 768px;
-        max-width: 768px;
-        margin: 0 auto;
-        
-  
-      
-    }
-    .quote-with-text {
-        border-radius: 50px;
-        height: 302px;
-        display: flex;
-        position: relative;
-        padding: 64px 80px;
-        width: 736px;
-
-        
-    }
-    .quote-quotes-main {
-        right: 80px;
-        top: 32px;
-        width: 48px;
-        height: 48px;
-      }
-      .quote-quotes-main svg {
-        width: 48px;
-        height: 48px;
-      }
-
-      .quote-title-main {
-        margin-bottom: 16px;
-        font-size: 24px;
-        line-height: 32px;
-        
-      }
-
-      .quote-paragraph-main {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: rgba(246, 246, 246, 0.6);
-        margin-bottom: 25px;
-        max-height: 100;
-        height: 77px;
-
-      }
-
-      .quote-photo-main {
-        width: 736px;
-        max-height: 302px;
-        height: 302px;
-        border-radius: 50px;
-      }
-  }
-
-
 @media screen and (min-width: 320px) {
-    
 
 .quote-the-day-main{
     /*змінити 100 на 10*/
-    padding: 100px 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    /*gap: 0;*/
     min-width: 320px;
     max-width: 375px;
     margin: 0 auto;
@@ -198,13 +104,103 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .quote-main-section {
-}
+  
 
   
 }
 
 
+@media screen and (min-width: 768px) {
+
+    .quote-the-day-main{
+        /*змінити 100 на 8*/
+        padding: 8px 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 768px;
+        max-width: 768px;
+        margin: 0 auto;
+        
+  
+      
+    }
+    .quote-with-text {
+        border-radius: 50px;
+        height: 302px;
+        display: flex;
+        position: relative;
+        padding: 64px 80px;
+        width: 736px;
+
+        
+    }
+    .quote-quotes-main {
+        right: 80px;
+        top: 32px;
+        width: 48px;
+        height: 48px;
+      }
+      .quote-quotes-main svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      .quote-title-main {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 32px;
+        
+      }
+
+      .quote-paragraph-main {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(246, 246, 246, 0.6);
+        margin-bottom: 25px;
+        max-height: 100;
+        height: 77px;
+
+      }
+
+      .quote-photo-main {
+        width: 736px;
+        max-height: 302px;
+        height: 302px;
+        border-radius: 50px;
+      }
+  }
+
+
+@media screen and (min-width: 1440px) {
+    /*змінити 100 на 8*/
+    .quote-the-day-main{
+        padding: 8px 16px;
+        flex-wrap: nowrap;
+        min-width: 1440px;
+        max-width: 1440px;
+        
+        
+    }
+    .quote-with-text {
+        border-radius: 50px;
+        width: 704px;
+        height: 302px;
+        padding: 64px;
+        display: flex;
+        position: relative;
+    
+
+        
+    }
+
+    .quote-photo-main {
+        width: 704px;
+      }
+    
+  }
 
 
 
