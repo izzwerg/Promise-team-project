@@ -218,7 +218,7 @@
         rgba(27, 27, 27, 0.7)
       ),
       url(../img/desktop/footer_desk.jpg);
-    padding-top: 64px 48px 26px 48px;
+    padding: 64px 48px 26px 48px;
   }
 
   .footer-block-second {
