@@ -24,21 +24,20 @@ async function onFormSubmit(event) {
 
   try {
     const response = await axios.post(BASE_URL, { email: userEmail });
-
-    if (response.status === 409) {
+    if (response.status === 201) {
+      iziToast.info({
+        title: 'Info',
+        message:
+          "We're excited to have you on board! :tada: Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
+      });
+    }
+  } catch (response) {
+    if (response.message === 'Request failed with status code 409') {
       iziToast.info({
         title: 'Info',
         message: 'Subscription already exists',
       });
       return;
-    }
-
-    if (response.status === 200) {
-      iziToast.info({
-        title: 'Info',
-        message:
-          "We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
-      });
     } else {
       iziToast.info({
         title: 'Info',
@@ -46,8 +45,6 @@ async function onFormSubmit(event) {
           'Sorry, an error occurred while verifying an email. Please try again!',
       });
     }
-  } catch (error) {
-    console.error(error);
   }
 }
 
