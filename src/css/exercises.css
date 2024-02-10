@@ -338,7 +338,7 @@
     .muscles-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 20px;
         row-gap: 40px;
     }
@@ -347,12 +347,9 @@
         /* width: 100%; */
         width: calc(25% - 20px);
         display: flex;
-
         align-items: center;
         justify-content: center;
         position: relative;
-        margin: 0 auto;
-        background-image: linear-gradient(rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0.7)), url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
         border-radius: 12px;
         background-position: center;
         background-repeat: no-repeat;
