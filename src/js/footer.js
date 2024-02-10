@@ -1,12 +1,14 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import axios from 'axios';
 
 const subscriptionForm = document.getElementById('subscriptionForm');
 const userSubmit = document.getElementById('user-submit');
-const subscribeButton = document.getElementById('subscribeButton');
+
 const BASE_URL = 'https://energyflow.b.goit.study/api/subscription';
 
 subscriptionForm.addEventListener('submit', onFormSubmit);
+
 async function onFormSubmit(event) {
   event.preventDefault();
 
@@ -17,32 +19,15 @@ async function onFormSubmit(event) {
       title: 'Info',
       message: 'Enter a valid email',
     });
-
     return;
   }
 
   try {
-    const checkResponse = await fetch(`${BASE_URL}/check-email`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: userEmail }),
+    const checkResponse = await axios.post(`${BASE_URL}`, {
+      email: userEmail,
     });
 
-    const checkData = await checkResponse.json();
-
-    if (!checkResponse.ok) {
-      iziToast.info({
-        title: 'Info',
-        message:
-          'Sorry, an error occurred while verifying an email. Please try again!',
-      });
-
-      return;
-    }
-
-    if (checkData.exists) {
+    if (checkResponse.status === 409) {
       iziToast.info({
         title: 'Info',
         message: 'Subscription already exists',
@@ -50,15 +35,9 @@ async function onFormSubmit(event) {
       return;
     }
 
-    const response = await fetch(BASE_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: userEmail }),
-    });
+    const response = await axios.post(BASE_URL, { email: userEmail });
 
-    if (response.ok) {
+    if (response.status === 200) {
       iziToast.info({
         title: 'Info',
         message:
