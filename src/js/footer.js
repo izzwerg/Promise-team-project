@@ -28,7 +28,7 @@ async function onFormSubmit(event) {
       iziToast.info({
         title: 'Info',
         message:
-          "We're excited to have you on board! :tada: Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
+          "We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
       });
     }
   } catch (response) {
