@@ -214,9 +214,11 @@ function renderFilteredExercises() {
           </div>
           <div class="filtered-rating-container">
               <p class="filtered-rating-text">${Number(item.rating).toFixed(1)}</p>
-              <svg class="filtered-rating-icon" width="18" height="18">
+              <div class="filtered-rating-icon-container">
+              <svg class="filtered-rating-icon" width="14" height="14">
                   <use href="./img/sprite.svg#star"></use>
               </svg>
+              </div>
           </div>
           <button class="filtered-start-ex-btn" type="button">Start
               <svg class="filtered-start-arrow-icon" width="14" height="14">
