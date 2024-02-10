@@ -93,7 +93,6 @@ function renderExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  muscleList.insertAdjacentHTML('beforeend', '<script type="module" src="exercises.js"></script>')
 }
 
 
