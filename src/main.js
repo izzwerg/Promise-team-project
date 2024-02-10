@@ -8,6 +8,8 @@ const exercisesTitle = document.querySelector('.exercises-title');
 const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
+const partHeader = document.querySelector('.exercises-title')
+
 let currentFilter = 'Muscles';
 
 let selectedBtn = 'muscle-btn';
@@ -95,6 +97,8 @@ function renderExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
+  muscleList.classList.remove("desk-flex")
+  partHeader.innerHTML = "Exercises"
   getByFilter(muscleList);
   exercisePage = 1;
 }
@@ -233,17 +237,17 @@ function renderFilteredExercises() {
                   <use href="./img/sprite.svg#runner"></use>
               </svg>
           </div>
-          <p class="filtered-ex-name">${item.name}</p>
+          <p class="filtered-ex-name">${capitalizeText(item.name)}</p>
       </div>
       <ul class="filtered-ex-desc-list">
           <li class="filtered-ex-desc-item">Burned calories:
               <span class="filtered-ex-desc-value">${item.burnedCalories} / ${item.time} min</span>
           </li>
           <li class="filtered-ex-desc-item">Body part:
-              <span class="filtered-ex-desc-value">${item.bodyPart}</span>
+              <span class="filtered-ex-desc-value">${capitalizeText(item.bodyPart)}</span>
           </li>
           <li class="filtered-ex-desc-item">Target:
-              <span class="filtered-ex-desc-value">${item.target}</span>
+              <span class="filtered-ex-desc-value">${capitalizeText(item.target)}</span>
           </li>
       </ul>
   </div>`
@@ -251,6 +255,10 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
+  partHeader.insertAdjacentHTML('beforeend', ` / <span class="exercises-title-grey">${capitalizeText(dataList[0].bodyPart)}</span>`)
+  if (window.screen.width >= 1440) {
+    muscleList.classList.add("desk-flex")
+  }
 }
 
 function setFilteredPagination() {
