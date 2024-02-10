@@ -27,5 +27,3 @@ function showButton() {
 function hideButton() {
   buttonScrollToTop.style.display = 'none';
 }
-
-// TODO: button is hidden when any pop-up is active (need modal open/close events)
