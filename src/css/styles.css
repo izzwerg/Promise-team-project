@@ -10,6 +10,7 @@
 @import url('./modal.css');
 @import url('./rating.css');
 @import url('./scroll-to-top.css');
+@import url('./loader.css');
 
 /* dm-sans-regular - latin_latin-ext */
 @font-face {
