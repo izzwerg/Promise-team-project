@@ -8,18 +8,30 @@ const exercisesTitle = document.querySelector('.exercises-title');
 const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
+let currentFilter = 'Muscles';
 
 let selectedBtn = 'muscle-btn';
+
+let totalPages;
+let page = 1;
+let dataList;
 
 [muscleBtn, bodyBtn, equipmentBtn].forEach(btn => {
   btn.addEventListener('click', function () {
     if (selectedBtn !== btn.id) {
       changeActiveBtn(btn.id);
       selectedBtn = btn.id;
-      //NOTE: change your wrapper here
+      page = 1;
       if (btn.id === 'muscle-btn') {
-        getExercises();
+        currentFilter = 'Muscles';
       }
+      if (btn.id === 'body-btn') {
+        currentFilter = 'Body parts';
+      }
+      if (btn.id === 'equipment-btn') {
+        currentFilter = 'Equipment';
+      }
+      getExercises();
     }
   });
 });
@@ -30,16 +42,12 @@ function changeActiveBtn(id) {
   });
 }
 
-let totalPages;
-let page = 1;
-let dataList;
-
 getExercises();
 
 async function getExercises() {
   const apiUrl = 'https://energyflow.b.goit.study/api/filters';
   const requestData = {
-    filter: 'Muscles',
+    filter: currentFilter,
     limit: setLimit(),
     page,
   };
