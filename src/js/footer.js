@@ -23,19 +23,15 @@ async function onFormSubmit(event) {
   }
 
   try {
-    const checkResponse = await axios.post(`${BASE_URL}`, {
-      email: userEmail,
-    });
+    const response = await axios.post(BASE_URL, { email: userEmail });
 
-    if (checkResponse.status === 409) {
+    if (response.status === 409) {
       iziToast.info({
         title: 'Info',
         message: 'Subscription already exists',
       });
       return;
     }
-
-    const response = await axios.post(BASE_URL, { email: userEmail });
 
     if (response.status === 200) {
       iziToast.info({
