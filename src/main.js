@@ -57,7 +57,6 @@ async function getExercises() {
       `${apiUrl}?${new URLSearchParams(requestData)}`
     );
     exercisesWrapper.innerHTML = `<div class="muscles-list"></div>`;
-    console.log(response.data);
     dataList = response.data.results;
     totalPages = response.data.totalPages;
     renderExercises();
