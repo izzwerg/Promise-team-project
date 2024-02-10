@@ -13,7 +13,11 @@ async function onFormSubmit(event) {
   const userEmail = userSubmit.value;
 
   if (!validateEmail(userEmail)) {
-    alert('Введіть коректний email адресу');
+    iziToast.info({
+      title: 'Info',
+      message: 'Enter a valid email',
+    });
+
     return;
   }
 
