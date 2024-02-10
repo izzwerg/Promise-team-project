@@ -177,7 +177,7 @@ async function getFilteredExerrcises() {
       page: exercisePage,
     };
   }
-  console.log(requestData);
+
   try {
     const response = await axios.get(
       `${apiUrl}?${new URLSearchParams(requestData)}`
@@ -213,7 +213,7 @@ function renderFilteredExercises() {
               <p class="filtered-workout-text">workout</p>
           </div>
           <div class="filtered-rating-container">
-              <p class="filtered-rating-text">${parseFloat(item.rating)}</p>
+              <p class="filtered-rating-text">${Number(item.rating).toFixed(1)}</p>
               <svg class="filtered-rating-icon" width="18" height="18">
                   <use href="./img/sprite.svg#star"></use>
               </svg>
