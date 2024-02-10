@@ -96,6 +96,7 @@ function renderExercises() {
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
   getByFilter(muscleList);
+  exercisePage = 1;
 }
 
 function setPagination() {

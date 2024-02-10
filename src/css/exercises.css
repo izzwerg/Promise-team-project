@@ -499,7 +499,7 @@
   .filtered-ex-name-box {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     margin-bottom: 8px;
     gap: 16px;
   }
@@ -525,7 +525,7 @@
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 24px;
-    line-height: 1;
+    line-height: 1.33;
     color: #1b1b1b;
     margin: 0;
 
