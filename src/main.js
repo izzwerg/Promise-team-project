@@ -15,6 +15,8 @@ let selectedBtn = 'muscle-btn';
 let totalPages;
 let page = 1;
 let dataList;
+let exerciseName;
+let exercisePage = 1;
 
 [muscleBtn, bodyBtn, equipmentBtn].forEach(btn => {
   btn.addEventListener('click', function () {
@@ -93,8 +95,8 @@ function renderExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
+  getByFilter(muscleList);
 }
-
 
 function setPagination() {
   const paginationList = [];
@@ -137,4 +139,139 @@ function setLimit() {
     return 12;
   }
   return 8;
+}
+
+function getByFilter(muscleList) {
+  const exerciseTargets = muscleList.querySelectorAll('.muscle-item');
+  exerciseTargets.forEach(exerciseTarget =>
+    exerciseTarget.addEventListener('click', function () {
+      const targetName = exerciseTarget.querySelector('.muscle-category');
+      exerciseName = targetName.textContent.toLowerCase();
+      getFilteredExerrcises();
+    })
+  );
+}
+
+async function getFilteredExerrcises() {
+  const apiUrl = 'https://energyflow.b.goit.study/api/exercises';
+  let filterCheck = document.querySelector('.active');
+  let requestData;
+  if (filterCheck.textContent == 'Body parts') {
+    requestData = {
+      bodypart: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+    };
+  }
+  if (filterCheck.textContent == 'Muscles') {
+    requestData = {
+      muscles: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+    };
+  }
+  if (filterCheck.textContent == 'Equipment') {
+    requestData = {
+      equipment: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+    };
+  }
+  console.log(requestData);
+  try {
+    const response = await axios.get(
+      `${apiUrl}?${new URLSearchParams(requestData)}`
+    );
+    exercisesWrapper.innerHTML = `<div class="muscles-list"></div>`;
+    dataList = response.data.results;
+    totalPages = response.data.totalPages;
+
+    renderFilteredExercises();
+    setFilteredPagination();
+  } catch (error) {
+    iziToast.error({
+      title: 'Error',
+      message: `Something went wrong. Please try again later.`,
+      position: 'topRight',
+    });
+  }
+}
+
+function setExercisesLimit() {
+  if (window.screen.width >= 1440) {
+    return 9;
+  }
+  return 8;
+}
+
+function renderFilteredExercises() {
+  const newData = dataList
+    .map(
+      item => `<div class="filtered-ex-item">
+      <div class="filtered-ex-item-header">
+          <div class="filtered-workout-box">
+              <p class="filtered-workout-text">workout</p>
+          </div>
+          <div class="filtered-rating-container">
+              <svg class="filtered-rating-icon" width="18" height="18">
+                  <use href="./img/sprite.svg#star"></use>
+              </svg>
+          </div>
+          <button class="filtered-start-ex-btn" type="button">Start
+              <svg class="filtered-start-arrow-icon" width="14" height="14">
+                  <use href="./img/sprite.svg#arrow"></use>
+              </svg>
+          </button>
+      </div>
+      <div class="filtered-ex-name-box">
+          <div class="filtered-run-icon-box">
+              <svg class="filtered-run-icon" width="16" height="16">
+                  <use href="./img/sprite.svg#runner"></use>
+              </svg>
+          </div>
+          <p class="filtered-ex-name">${item.name}</p>
+      </div>
+      <ul class="filtered-ex-desc-list">
+          <li class="filtered-ex-desc-item">Burned calories:
+              <span class="filtered-ex-desc-value">${item.burnedCalories} / ${item.time} min</span>
+          </li>
+          <li class="filtered-ex-desc-item">Body part:
+              <span class="filtered-ex-desc-value">${item.bodyPart}</span>
+          </li>
+          <li class="filtered-ex-desc-item">Target:
+              <span class="filtered-ex-desc-value">${item.target}</span>
+          </li>
+      </ul>
+  </div>`
+    )
+    .join('');
+  const muscleList = document.querySelector('.muscles-list');
+  muscleList.innerHTML = newData;
+}
+
+function setFilteredPagination() {
+  const paginationList = [];
+  for (let i = 1; i <= totalPages; i++) {
+    paginationList.push(
+      `<span class="pagination-number ${
+        i === exercisePage ? 'active' : ''
+      }">${i}</span>`
+    );
+  }
+  paginationWrapper.innerHTML = paginationList.join('');
+  const paginationNumbers =
+    document.getElementsByClassName('pagination-number');
+  for (let i = 0; i < paginationNumbers.length; i++) {
+    paginationNumbers[i].addEventListener('click', function () {
+      changeFilteredPagination(i + 1);
+    });
+  }
+}
+
+function changeFilteredPagination(newPageNumber) {
+  if (newPageNumber === exercisePage) {
+    return;
+  }
+  exercisePage = newPageNumber;
+  getFilteredExerrcises();
 }
