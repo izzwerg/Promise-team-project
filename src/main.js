@@ -213,6 +213,7 @@ function renderFilteredExercises() {
               <p class="filtered-workout-text">workout</p>
           </div>
           <div class="filtered-rating-container">
+              <p class="filtered-rating-text">${parseFloat(item.rating)}</p>
               <svg class="filtered-rating-icon" width="18" height="18">
                   <use href="./img/sprite.svg#star"></use>
               </svg>
