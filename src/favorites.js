@@ -105,3 +105,5 @@ export function capitalizeText(text) {
   const remainingLetters = text.slice(1);
   return firstLetterCap + remainingLetters;
 }
+
+renderFilteredFavExercises();
