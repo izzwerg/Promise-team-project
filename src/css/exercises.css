@@ -654,7 +654,7 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0px 2px;
+    transform: translate(0px, 2px);
   }
 
   .search-input {
@@ -977,7 +977,7 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0px 2px;
+    transform: translate(0px, 2px);
   }
 
   .search-input {
