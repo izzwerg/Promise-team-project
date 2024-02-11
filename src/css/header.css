@@ -128,10 +128,12 @@
   margin-right: auto;
   z-index: 1000;
   background-color: var(--white);
+  justify-content: center;
 }
 
 .backdrop-menu {
   width: 100%;
+  max-width: 335px;
   height: 100%;
   border-radius: 30px;
   background-color: var(--grey);
