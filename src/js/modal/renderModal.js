@@ -1,3 +1,13 @@
+function capitalizeText(text) {
+    if (!text.length) {
+      return '';
+    }
+    const firstLetter = text.charAt(0);
+    const firstLetterCap = firstLetter.toUpperCase();
+    const remainingLetters = text.slice(1);
+    return firstLetterCap + remainingLetters;
+  }
+
 function renderExercise(
   {
     gifUrl,
