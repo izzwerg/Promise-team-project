@@ -70,10 +70,8 @@
     justify-content: center;
     position: relative;
     margin: 0;
-    background-image: linear-gradient(
-        rgba(16, 16, 16, 0.7),
-        rgba(16, 16, 16, 0.7)
-      ),
+    background-image: linear-gradient(rgba(16, 16, 16, 0.7),
+        rgba(16, 16, 16, 0.7)),
       url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
     border-radius: 12px;
     background-position: center;
@@ -95,6 +93,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 2px;
+    width: 70%;
   }
 
   .muscle-category {
@@ -121,9 +120,10 @@
     justify-content: center;
     gap: 8px;
     color: var(--black);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 32px;
+    letter-spacing: 0.04em;
   }
 
   .pagination-number {
@@ -141,7 +141,7 @@
     height: 32px;
   }
 
-  
+
   .exercises-title-grey {
     font-weight: 400;
     font-size: 20px;
@@ -276,8 +276,10 @@
     color: #1b1b1b;
     margin: 0;
 
-    white-space: nowrap; /* Скасуємо перенесення тексту */
-    overflow: hidden; /* Обрізаємо вміст */
+    white-space: nowrap;
+    /* Скасуємо перенесення тексту */
+    overflow: hidden;
+    /* Обрізаємо вміст */
     text-overflow: ellipsis;
     width: calc(100% - 40px);
   }
@@ -423,10 +425,8 @@
     justify-content: center;
     position: relative;
     margin: 0;
-    background-image: linear-gradient(
-        rgba(16, 16, 16, 0.7),
-        rgba(16, 16, 16, 0.7)
-      ),
+    background-image: linear-gradient(rgba(16, 16, 16, 0.7),
+        rgba(16, 16, 16, 0.7)),
       url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
     border-radius: 12px;
     background-position: center;
@@ -448,6 +448,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 2px;
+    width: 70%;
   }
 
   .muscle-category {
@@ -477,6 +478,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
+    letter-spacing: 0.04em;
   }
 
   .pagination-number {
@@ -494,7 +496,7 @@
     height: 32px;
   }
 
-  
+
   .exercises-title-grey {
     font-weight: 400;
     font-size: 24px;
@@ -629,8 +631,10 @@
     color: #1b1b1b;
     margin: 0;
 
-    white-space: nowrap; /* Скасуємо перенесення тексту */
-    overflow: hidden; /* Обрізаємо вміст */
+    white-space: nowrap;
+    /* Скасуємо перенесення тексту */
+    overflow: hidden;
+    /* Обрізаємо вміст */
     text-overflow: ellipsis;
     width: calc(100% - 40px);
   }
@@ -801,6 +805,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 2px;
+    width: 70%;
   }
 
   .muscle-category {
@@ -830,11 +835,14 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
+    letter-spacing: 0.04em;
   }
 
   .pagination-number {
     color: rgba(27, 27, 27, 0.4);
   }
+
+
 
   .pagination-number.active {
     color: var(--black);
@@ -982,8 +990,10 @@
     margin: 0;
 
 
-    white-space: nowrap; /* Скасуємо перенесення тексту */
-    overflow: hidden; /* Обрізаємо вміст */
+    white-space: nowrap;
+    /* Скасуємо перенесення тексту */
+    overflow: hidden;
+    /* Обрізаємо вміст */
     text-overflow: ellipsis;
     width: calc(100% - 40px);
   }
@@ -1088,6 +1098,7 @@
   cursor: pointer;
 }
 
-.pagination-number {
+.pagination-number:hover {
   cursor: pointer;
+
 }
