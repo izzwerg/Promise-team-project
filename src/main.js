@@ -315,6 +315,7 @@ function changeFilteredPagination(newPageNumber) {
   getFilteredExerrcises();
 }
 
+
 // Оголошуємо змінну для зберігання останнього пошукового запиту
 let lastSearchQuery = '';
 
@@ -402,8 +403,10 @@ async function performSearch(query, filter, requestData) {
     dataList = response.data.results;
     totalPages = response.data.totalPages;
 
-    if (totalPages > 1) {
+    if (response.data.perPage >= 9 && totalPages > 1) {
       setFilteredPagination();
+    } else {
+      paginationWrapper.style.display = 'none'; 
     }
 
     renderFilteredExercises();
