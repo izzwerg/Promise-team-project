@@ -1,0 +1,40 @@
+/* Scroll-to-top button */
+/* Mobile */
+#button-to-top {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #7E847F;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 250ms ease-in-out;
+}
+
+#button-to-top:hover {
+    background-color: #5F6560;
+}
+
+.button-to-top-svg {
+    width: 20px;
+    height: 20px;
+    fill: #F6F6F6;
+}
+
+/* Desktop 1440 */
+@media screen and (min-width: 1440px) {
+    #button-to-top {
+        width: 100px;
+        height: 100px;
+    }
+
+    .button-to-top-svg {
+        width: 50px;
+        height: 50px;
+    }
+}
