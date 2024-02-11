@@ -2,6 +2,10 @@
 /* Mobile */
 #button-to-top {
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -9,21 +13,11 @@
     background-color: #7E847F;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
     transition: background-color 250ms ease-in-out;
 }
 
 #button-to-top:hover {
     background-color: #5F6560;
-}
-
-.button-to-top-icon-block {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .button-to-top-svg {
