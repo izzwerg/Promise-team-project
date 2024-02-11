@@ -1,5 +1,13 @@
+// function renderFilteredFavExercises() {
+//   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+//   const newData = favorites
+
 function renderFilteredFavExercises() {
-  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  let favorites = [];
+  if (typeof localStorage !== 'undefined') {
+    favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  }
+
   const newData = favorites
     .map(
       item => `<li class="fav-ex-item">
@@ -23,7 +31,7 @@ function renderFilteredFavExercises() {
       <div class="fav-ex-name-box">
           <div class="fav-run-icon-box">
               <svg class="fav-run-icon" width="16" height="16">
-                  <use href="./assets/sprite-a52c12ca.svg#runner"></use>
+                  <use href="./img/sprite.svg#runner"></use>
               </svg>
           </div>
           <p class="fav-ex-name">${capitalizeText(item.name)}</p>
@@ -48,52 +56,62 @@ function renderFilteredFavExercises() {
   </div>`
     )
     .join('');
-  if (newData.length === 0) {
-    const noFavExercisesHTML = `
+
+  const noFavExercisesHTML = `
       <div class="no-fav-ex-inner">
         <div class="dumbbell-img"></div>
         <p class="no-fav-text">It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>
       </div>
     `;
-    // Render the HTML for no favorite exercises
-    document.getElementsByClassName('no-fav-ex-inner').innerHTML =
-      noFavExercisesHTML;
-  } else {
-    // Render the HTML for filtered favorite exercises
-    document.getElementsByClassName('fav-ex-list').innerHTML = newData;
-  }
 
-  const screenWidth = window.innerWidth;
-  const itemsPerPage = screenWidth > 768 ? 0 : 8;
-  const totalPages = Math.ceil(favorites.length / itemsPerPage);
+  // const screenWidth = window.innerWidth;
+  // const itemsPerPage = screenWidth > 768 ? 0 : 8;
+  // const totalPages = Math.ceil(favorites.length / itemsPerPage);
 
-  if (totalPages > 1) {
-    const paginationContainer =
-      document.getElementsByClassName('fav-pag-btn-set')[0];
-    paginationContainer.innerHTML = '';
+  // const noFavExercisesContainer = document.querySelector('.no-fav-ex-inner');
+  // const favExercisesContainer = document.querySelector('.fav-ex-list');
+  // const paginationContainer = document.querySelector('.fav-pag-btn-set');
 
-    for (let i = 1; i <= totalPages; i++) {
-      const button = document.createElement('button');
-      button.classList.add('fav-pagination-btn');
-      button.textContent = i;
-      paginationContainer.appendChild(button);
-    }
-  }
+  // if (newData.length === 0) {
+  //   if (noFavExercisesContainer) {
+  //     noFavExercisesContainer.innerHTML = noFavExercisesHTML;
+  //   }
+  // } else {
+  //   if (favExercisesContainer) {
+  //     favExercisesContainer.innerHTML = newData;
+  //   }
+  // }
 
-  const deleteButtons = document.getElementsByClassName('fav-delete-btn');
-  Array.from(deleteButtons).forEach(button => {
-    button.addEventListener('click', () => {
-      const listItem = button.closest('.fav-ex-item');
-      const itemId = listItem.querySelector('.fav-start-ex-btn').dataset.id;
+  // if (totalPages > 1) {
+  //   if (paginationContainer) {
+  //     const fragment = document.createDocumentFragment();
 
-      // Remove the item from the list
-      listItem.remove();
+  //     for (let i = 1; i <= totalPages; i++) {
+  //       const button = document.createElement('button');
+  //       button.classList.add('fav-pagination-btn');
+  //       button.textContent = i;
+  //       fragment.appendChild(button);
+  //     }
 
-      // Remove the item from local storage
-      const updatedFavorites = favorites.filter(item => item._id !== itemId);
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    });
-  });
+  //     paginationContainer.innerHTML = '';
+  //     paginationContainer.appendChild(fragment);
+  //   }
+  // }
+
+  // const deleteButtons = document.querySelectorAll('.fav-delete-btn');
+  // Array.from(deleteButtons).forEach(button => {
+  //   button.addEventListener('click', () => {
+  //     const listItem = button.closest('.fav-ex-item');
+  //     const itemId = listItem.querySelector('.fav-start-ex-btn').dataset.id;
+
+  //     // Remove the item from the list
+  //     listItem.remove();
+
+  //     // Remove the item from local storage
+  //     const updatedFavorites = favorites.filter(item => item._id !== itemId);
+  //     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  //   });
+  // });
 }
 
 export function capitalizeText(text) {
