@@ -333,6 +333,28 @@
     border: none;
     border-radius: 30px;
   }
+  .no-search-server {
+    font-family: DM Sans, sans-serif;
+    color: var(--black);
+    width: 295px;
+    height: 90px;
+    margin-top: 144px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -1%;
+
+
+  }
+
+  .no-search-server:last-child {
+    margin-bottom: 320px;
+
+  }
+
+  .gray-world-server {
+    color: var(--grey);
+  }
 }
 
 /* TABLET EXRECISES*/
@@ -664,6 +686,35 @@
     border: none;
     border-radius: 30px;
   }
+  .no-search-server {
+    font-family: DM Sans, sans-serif;
+    color: var(--black);
+    width: 536px;
+    height: 96px;
+    margin-top: 200px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -1%;
+
+
+
+  }
+
+  .no-search-server:last-child {
+    margin-bottom: 485px;
+
+  }
+
+  .gray-world-server {
+    color: var(--grey);
+    font-weight: 400;
+  }
+  .wrapper-exercises {
+    display: flex;
+    justify-content: center;
+
+  }
 }
 
 /* DESKTOP EXRECISES*/
@@ -986,6 +1037,35 @@
     padding: 12px 48px 12px 14px;
     border: none;
     border-radius: 30px;
+  }
+  .no-search-server {
+    font-family: DM Sans, sans-serif;
+    color: var(--black);
+    width: 684px;
+    height: 72px;
+    margin-top: 197px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -1%;
+
+
+
+  }
+
+  .no-search-server:last-child {
+    margin-bottom: 288px;
+
+  }
+
+  .gray-world-server {
+    color: var(--grey);
+    font-weight: 400;
+  }
+  .wrapper-exercises {
+    display: flex;
+    justify-content: center;
+
   }
 }
 
