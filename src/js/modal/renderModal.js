@@ -1,5 +1,3 @@
-import { capitalizeText } from '../../main';
-
 function renderExercise(
   {
     gifUrl,
