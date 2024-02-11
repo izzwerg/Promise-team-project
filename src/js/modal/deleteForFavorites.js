@@ -18,6 +18,9 @@ function deleteForFavorites(deletedObject) {
         addBtn.classList.add('is-visible');
         delBtn.classList.remove('is-visible');
         delBtn.classList.add('is-hidden');
+        iziToast.info({
+            message:'Вправу видалено з улюблених!'
+        })
     }
 
     delBtn.addEventListener('click',delHandler);
