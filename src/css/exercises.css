@@ -349,6 +349,7 @@
 
   .no-search-server:last-child {
     margin-bottom: 320px;
+    font-weight: 400;
 
   }
 
@@ -703,6 +704,7 @@
 
   .no-search-server:last-child {
     margin-bottom: 485px;
+    font-weight: 400;
 
   }
 
@@ -1041,8 +1043,8 @@
   .no-search-server {
     font-family: DM Sans, sans-serif;
     color: var(--black);
-    width: 684px;
-    height: 72px;
+    width: 536px;
+    height: 96px;
     margin-top: 197px;
     text-align: center;
     font-weight: 500;
