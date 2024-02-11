@@ -317,6 +317,11 @@ function changeFilteredPagination(newPageNumber) {
 
 
 
+// Глобальні змінні для зберігання значень параметрів пошуку
+let lastSearchQuery = '';
+let filter = '';
+let subcategory = '';
+
 function setSearchPagination() {
   const paginationList = [];
   paginationWrapper.classList.remove("scroll-x");
@@ -354,53 +359,18 @@ function changeSerchedPagination(newPageNumber) {
   performSearch();
 }
 
-// Оголошуємо змінну для зберігання останнього пошукового запиту
-let lastSearchQuery = '';
-
 // Додавання обробника подій для відправки форми пошуку
 searchForm.addEventListener('submit', async function (event) {
-  event.preventDefault(); // Зупиняємо стандартну поведінку форми
+  event.preventDefault(); 
 
   const formData = new FormData(searchForm);
-  const searchQuery = formData.get('search');
-  const filter = formData.get('filter');
-  const subcategory = formData.get('subcategory');
+  lastSearchQuery = formData.get('search').trim(); // Зберігаємо значення останнього пошукового запиту
+  filter = formData.get('filter');
+  subcategory = formData.get('subcategory');
 
-  if (searchQuery.trim() !== '') { // Перевіряємо, чи не пустий запит
-    // Зберігаємо значення останнього пошукового запиту
-    lastSearchQuery = searchQuery;
-
-    // Перевіряємо вибраний фільтр та підвид
-    let filterCheck = document.querySelector('.active');
-    let requestData;
-
-    if (filterCheck.textContent == 'Body parts') {
-      requestData = {
-        bodypart: exerciseName,
-        limit: setExercisesLimit(),
-        page: exercisePage,
-        subcategory: subcategory // Додаємо значення підвиду
-      };
-    }
-    if (filterCheck.textContent == 'Muscles') {
-      requestData = {
-        muscles: exerciseName,
-        limit: setExercisesLimit(),
-        page: exercisePage,
-        subcategory: subcategory // Додаємо значення підвиду
-      };
-    }
-    if (filterCheck.textContent == 'Equipment') {
-      requestData = {
-        equipment: exerciseName,
-        limit: setExercisesLimit(),
-        page: exercisePage,
-        subcategory: subcategory // Додаємо значення підвиду
-      };
-    }
-
-    await performSearch(searchQuery, filter, requestData); // Викликаємо функцію для виконання пошуку
-    searchForm.reset(); // Очищення поля пошуку
+  if (lastSearchQuery !== '') { 
+    await performSearch(); 
+    searchForm.reset(); 
   }
 });
 
@@ -411,19 +381,47 @@ paginationWrapper.addEventListener('click', function (event) {
     // Отримуємо номер сторінки, на яку клікнули
     const page = parseInt(event.target.dataset.page);
     // Викликаємо функцію для виконання пошуку з попереднім пошуковим запитом
-    performSearch(lastSearchQuery, filter, { page: page });
+    performSearch();
   }
 });
 
 // Функція для виконання пошуку
-async function performSearch(query, filter, requestData) {
+async function performSearch() {
   const apiUrl = 'https://energyflow.b.goit.study/api/exercises';
   const searchData = {
-    keyword: query, // Використовуємо ключове слово для параметра keyword
+    keyword: lastSearchQuery, // Використовуємо ключове слово для параметра keyword
     limit: setExercisesLimit(), // Встановлюємо ліміт вправ на сторінці
     page: exercisePage, // Встановлюємо порядковий номер сторінки
     filter: filter // Додаємо значення фільтру
   };
+
+  let requestData;
+  const filterCheck = document.querySelector('.active');
+
+  if (filterCheck.textContent == 'Body parts') {
+    requestData = {
+      bodypart: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+      subcategory: subcategory // Додаємо значення підвиду
+    };
+  }
+  if (filterCheck.textContent == 'Muscles') {
+    requestData = {
+      muscles: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+      subcategory: subcategory 
+    };
+  }
+  if (filterCheck.textContent == 'Equipment') {
+    requestData = {
+      equipment: exerciseName,
+      limit: setExercisesLimit(),
+      page: exercisePage,
+      subcategory: subcategory 
+    };
+  }
 
   const requestDataMerged = { ...searchData, ...requestData }; // Об'єднуємо дані пошуку з додатковими параметрами
 
@@ -441,7 +439,7 @@ async function performSearch(query, filter, requestData) {
     dataList = response.data.results;
     totalPages = response.data.totalPages;
 
-    if (totalPages > 1) {
+    if (totalPages >= 1) {
       setSearchPagination();
     }
     renderFilteredExercises();
@@ -456,6 +454,7 @@ async function performSearch(query, filter, requestData) {
 
 // Функція для показу повідомлення про відсутність результатів
 function showNoResultsMessage() {
+  paginationWrapper.innerHTML = ''; 
   exercisesWrapper.innerHTML = `
     <div class="wrapper-exercises">
       <p class="no-search-server">Unfortunately, <span class="gray-world-server">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>
