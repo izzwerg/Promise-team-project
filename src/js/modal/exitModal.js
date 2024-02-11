@@ -3,8 +3,6 @@ function exitModal(modalSection, containerModal) {
     const exitModalHandler = () => {
         modalSection.classList.remove('is-visible');
         containerModal.innerHTML = '';
-        // document.removeEventListener('keydown', keydownHandler);
-        // document.removeEventListener('click', backdropHandler);
     }
 
     const backdropHandler = (event) => {

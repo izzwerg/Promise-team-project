@@ -1,13 +1,12 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-let favoritesInStorage = JSON.parse(localStorage.getItem('favorites'));
-
 function addToFavorites(newExercises) {
     const addBtn = document.querySelector('.addToFavorites');
     const delBtn = document.querySelector('.deletedForFavorites');
     
     const addHandler = () => {
+        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites'));
         if (!favoritesInStorage) {
             favoritesInStorage = [];
         }

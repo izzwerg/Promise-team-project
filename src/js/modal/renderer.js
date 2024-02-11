@@ -3,7 +3,6 @@ import { addToFavorites } from "./addToFavorites";
 import { deleteForFavorites } from "./deleteForFavorites"
 import { exitModal } from "./exitModal";
 import { isObjectInLocalStorage } from "./isObjectInLocalStorage";
-import { testGetExercises } from './testFetch';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
@@ -18,9 +17,8 @@ list.addEventListener('click', async (event) => {
             const exerciseData = await searchExercises(exercisesId);
             renderExercise(exerciseData);
             isObjectInLocalStorage(exercisesId);
-            console.log(isObjectInLocalStorage(exercisesId))
             addToFavorites(exerciseData);
-            deleteForFavorites();
+            deleteForFavorites(exerciseData);
             exitModal(modalSection, containerModal);
         } catch (error) {
             console.log(error)
