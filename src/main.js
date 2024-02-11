@@ -271,12 +271,12 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  partHeader.insertAdjacentHTML(
+  if (exercisePage == 1) {partHeader.insertAdjacentHTML(
     'beforeend',
     ` / <span class="exercises-title-grey">${capitalizeText(
       dataList[0].bodyPart
     )}</span>`
-  );
+  );}
   searchPlace.classList.remove('is-hidden');
   if (window.screen.width >= 1440) {
     muscleList.classList.add('desk-flex');
