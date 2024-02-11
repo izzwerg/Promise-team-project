@@ -1,5 +1,6 @@
 function renderFilteredFavExercises() {
-  const newData = dataList
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  const newData = favorites
     .map(
       item => `<li class="fav-ex-item">
       <div class="fav-ex-item-header">
@@ -64,7 +65,7 @@ function renderFilteredFavExercises() {
 
   const screenWidth = window.innerWidth;
   const itemsPerPage = screenWidth > 768 ? 0 : 8;
-  const totalPages = Math.ceil(dataList.length / itemsPerPage);
+  const totalPages = Math.ceil(favorites.length / itemsPerPage);
 
   if (totalPages > 1) {
     const paginationContainer =
