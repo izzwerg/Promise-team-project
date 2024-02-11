@@ -22,7 +22,7 @@ function scrollToTop() {
   });
 }
 function showButton() {
-  buttonScrollToTop.style.display = 'block';
+  buttonScrollToTop.style.display = 'flex';
 }
 function hideButton() {
   buttonScrollToTop.style.display = 'none';
