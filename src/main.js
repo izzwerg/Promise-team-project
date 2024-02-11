@@ -297,6 +297,8 @@ function setFilteredPagination() {
     }
     if (totalPages > 12 && window.screen.width < 768) {
       paginationWrapper.classList.add("scroll-x");
+    } else if (totalPages > 23 && window.screen.width < 1440) {
+      paginationWrapper.classList.add("scroll-x");
     }
   } else {
     paginationWrapper.innerHTML = '';

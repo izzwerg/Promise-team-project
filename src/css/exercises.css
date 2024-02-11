@@ -1004,3 +1004,7 @@
   overflow-x: scroll;
   justify-content: flex-start;
 }
+
+.muscle-item {
+  cursor: pointer;
+}
