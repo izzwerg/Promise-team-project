@@ -4,7 +4,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const exercisesWrapper = document.querySelector('.wrapper-exercises');
 const paginationWrapper = document.querySelector('.pagination-wrapper');
-const exercisesTitle = document.querySelector('.exercises-title');
 const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
@@ -75,15 +74,6 @@ async function getExercises() {
   }
 }
 
-function getBodyParts() {
-  // BODY PARTS SECTION
-  return;
-}
-
-function getEquipment() {
-  //Equipment SECTION
-  return;
-}
 function renderExercises() {
   const newData = dataList
     .map(
