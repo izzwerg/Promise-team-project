@@ -82,11 +82,11 @@
 
 }
 
-.rating-star-list {
+/* .rating-star-list {
     display: flex;
     fill: #1B1B1B33;
     gap: 2px;
-}
+} */
 
 /* .color-star{
     fill: var(--orange);
