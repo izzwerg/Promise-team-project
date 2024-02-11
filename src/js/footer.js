@@ -11,7 +11,6 @@ subscriptionForm.addEventListener('submit', onFormSubmit);
 
 async function onFormSubmit(event) {
   event.preventDefault();
-  subscriptionForm.reset();
 
   const userEmail = userSubmit.value;
 
@@ -25,6 +24,7 @@ async function onFormSubmit(event) {
 
   try {
     const response = await axios.post(BASE_URL, { email: userEmail });
+    subscriptionForm.reset();
     if (response.status === 201) {
       iziToast.info({
         title: 'Info',
