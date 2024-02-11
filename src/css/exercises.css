@@ -588,6 +588,7 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
+    translate: 0 2px;
   }
 
   .search-input {

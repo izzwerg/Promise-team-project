@@ -9,7 +9,7 @@ const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
 const partHeader = document.querySelector('.exercises-title');
-const searchPlace = document.querySelector('.button-exercises')
+const searchPlace = document.querySelector('.search-container')
 
 let currentFilter = 'Muscles';
 
@@ -98,8 +98,9 @@ function renderExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  muscleList.classList.remove("desk-flex")
-  partHeader.innerHTML = "Exercises"
+  muscleList.classList.remove("desk-flex");
+  searchPlace.classList.add("is-hidden");
+  partHeader.innerHTML = "Exercises";
   getByFilter(muscleList);
   exercisePage = 1;
 }
@@ -257,7 +258,7 @@ function renderFilteredExercises() {
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
   partHeader.insertAdjacentHTML('beforeend', ` / <span class="exercises-title-grey">${capitalizeText(dataList[0].bodyPart)}</span>`);
-
+  searchPlace.classList.remove("is-hidden")
   if (window.screen.width >= 1440) {
     muscleList.classList.add("desk-flex");
   }
