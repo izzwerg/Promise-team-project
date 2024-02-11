@@ -210,7 +210,7 @@ function setExercisesLimit() {
 function renderFilteredExercises() {
   const newData = dataList
     .map(
-      item => `<div class="filtered-ex-item">
+      item => `<div class="filtered-ex-item" data-id="${item._id}">
       <div class="filtered-ex-item-header">
           <div class="filtered-workout-box">
               <p class="filtered-workout-text">workout</p>

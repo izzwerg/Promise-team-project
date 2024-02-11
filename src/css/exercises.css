@@ -276,7 +276,6 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
@@ -325,7 +324,6 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0 2px;
   }
 
   .search-input {
@@ -608,7 +606,6 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
@@ -657,7 +654,7 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0 2px;
+    transform: translate(0px, 2px);
   }
 
   .search-input {
@@ -931,7 +928,7 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
+
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
@@ -980,7 +977,7 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0 2px;
+    transform: translate(0px, 2px);
   }
 
   .search-input {
