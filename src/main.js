@@ -107,6 +107,7 @@ function renderExercises() {
 }
 
 function setPagination() {
+  paginationWrapper.classList.remove("scroll-x");
   if (totalPages > 1) {
   const paginationList = [];
   for (let i = 1; i <= totalPages; i++) {
@@ -287,6 +288,7 @@ function renderFilteredExercises() {
 
 function setFilteredPagination() {
   const paginationList = [];
+  paginationWrapper.classList.remove("scroll-x");
   if (totalPages > 1) {
     for (let i = 1; i <= totalPages; i++) {
       paginationList.push(
@@ -302,6 +304,9 @@ function setFilteredPagination() {
       paginationNumbers[i].addEventListener('click', function () {
         changeFilteredPagination(i + 1);
       });
+    }
+    if (totalPages > 12 && window.screen.width < 768) {
+      paginationWrapper.classList.add("scroll-x");
     }
   } else {
     paginationWrapper.innerHTML = '';

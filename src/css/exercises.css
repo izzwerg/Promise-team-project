@@ -137,7 +137,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
   }
 
@@ -469,7 +469,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
   }
 
@@ -793,7 +793,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
   }
 
@@ -998,4 +998,10 @@
 
 .tab-flex {
   row-gap: 20px;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+  justify-content: flex-start;
+  border-radius: 16px;
 }
