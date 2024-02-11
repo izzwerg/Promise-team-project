@@ -8,7 +8,8 @@ const exercisesTitle = document.querySelector('.exercises-title');
 const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
-const partHeader = document.querySelector('.exercises-title')
+const partHeader = document.querySelector('.exercises-title');
+const searchPlace = document.querySelector('.button-exercises')
 
 let currentFilter = 'Muscles';
 
@@ -255,9 +256,10 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  partHeader.insertAdjacentHTML('beforeend', ` / <span class="exercises-title-grey">${capitalizeText(dataList[0].bodyPart)}</span>`)
+  partHeader.insertAdjacentHTML('beforeend', ` / <span class="exercises-title-grey">${capitalizeText(dataList[0].bodyPart)}</span>`);
+
   if (window.screen.width >= 1440) {
-    muscleList.classList.add("desk-flex")
+    muscleList.classList.add("desk-flex");
   }
 }
 

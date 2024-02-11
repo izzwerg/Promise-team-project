@@ -34,6 +34,7 @@
     justify-content: flex-start;
     gap: 6px;
     margin-bottom: 20px;
+    position: relative;
   }
 
   .exercises-category {
@@ -286,7 +287,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    padding: 64px 32px;
+    padding: 64px 48px;
   }
 
   .exercises-title {
@@ -303,6 +304,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
+    position: relative;
   }
 
   .exercises-category {
@@ -332,7 +334,7 @@
 
   .muscle-item {
     /* width: 100%; */
-    width: calc(25% - 20px);
+    width: calc(25% - 15px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -567,8 +569,36 @@
     color: #1b1b1b;
     margin-right: 10px;
   }
+
+  .search-container {
+    position: absolute;
+    right: 0;
+  }
+
+  .search-button {
+    position: absolute;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+  }
+
+  .search-icon {
+    fill: transparent;
+    stroke: var(--black);
+  }
+
+  .search-input {
+    width: 273px;
+    height: 48px;
+    padding: 12px 48px 12px 14px;
+    border: none;
+    border-radius: 30px;
+  }
 }
 
 .desk-flex {
-    row-gap: 28px;
+  row-gap: 28px;
 }
