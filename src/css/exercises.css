@@ -324,7 +324,6 @@
   .search-icon {
     fill: transparent;
     stroke: var(--black);
-    translate: 0px 2px;
   }
 
   .search-input {
