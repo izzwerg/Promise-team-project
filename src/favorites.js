@@ -79,6 +79,21 @@ function renderFilteredFavExercises() {
       paginationContainer.appendChild(button);
     }
   }
+
+  const deleteButtons = document.getElementsByClassName('fav-delete-btn');
+  Array.from(deleteButtons).forEach(button => {
+    button.addEventListener('click', () => {
+      const listItem = button.closest('.fav-ex-item');
+      const itemId = listItem.querySelector('.fav-start-ex-btn').dataset.id;
+
+      // Remove the item from the list
+      listItem.remove();
+
+      // Remove the item from local storage
+      const updatedFavorites = favorites.filter(item => item._id !== itemId);
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+    });
+  });
 }
 
 export function capitalizeText(text) {
