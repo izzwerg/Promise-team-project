@@ -221,20 +221,20 @@ function renderFilteredExercises() {
               )}</p>
               <div class="filtered-rating-icon-container">
               <svg class="filtered-rating-icon" width="14" height="14">
-                  <use href="./img/sprite.svg#star"></use>
+                  <use href="./assets/sprite-a52c12ca.svg#star"></use>
               </svg>
               </div>
           </div>
           <button class="filtered-start-ex-btn" type="button">Start
               <svg class="filtered-start-arrow-icon" width="14" height="14">
-                  <use href="./img/sprite.svg#arrow"></use>
+                  <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
               </svg>
           </button>
       </div>
       <div class="filtered-ex-name-box">
           <div class="filtered-run-icon-box">
               <svg class="filtered-run-icon" width="16" height="16">
-                  <use href="./img/sprite.svg#runner"></use>
+                  <use href="./assets/sprite-a52c12ca.svg#runner"></use>
               </svg>
           </div>
           <p class="filtered-ex-name">${capitalizeText(item.name)}</p>
