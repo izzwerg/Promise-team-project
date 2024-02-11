@@ -6,7 +6,7 @@ import { isObjectInLocalStorage } from "./isObjectInLocalStorage";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-const list = document.querySelector('.exercise_list');
+const list = document.querySelector('.filtered-ex-item');
 const modalSection = document.querySelector('.section_modal')
 const containerModal = document.querySelector('.container_modal');
 
