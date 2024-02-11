@@ -1008,3 +1008,7 @@
 .muscle-item {
   cursor: pointer;
 }
+
+.pagination-number {
+  cursor: pointer;
+}
