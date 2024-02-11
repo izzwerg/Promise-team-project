@@ -76,12 +76,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    fill: var(--orange);
+    fill: rgb(27, 27, 27, 0.2);
     gap: 2px;
 }
 
-.stars .icon:nth-child(n+5) {
-    fill: rgb(27, 27, 27, 0.2);
+.stars .icon:nth-child(n+4) {
+    fill: var(--orange);
 }
 
 .icon {
@@ -154,16 +154,45 @@
     background-color: var(--dark-grey);
 }
 
+.addToFavorites:hover {
+    background-color: var(--dark-grey);
+}
+
 .addToFavorites .icon {
     width: 18px;
     height: 18px;
     margin-left: 8px;
     stroke: var(--white);
     fill: var(--grey);
+    transition: fill 0.3s ease;
+}
+
+.addToFavorites:active .icon {
+    fill: var(--dark-grey);
+}
+
+.addToFavorites:hover .icon {
+    fill: var(--dark-grey);
 }
 
 .deletedForFavorites {
     display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--grey);
+    transition: background-color 0.3s ease;
+}
+
+.deletedForFavorites:active {
+    background-color: var(--dark-grey);
+}
+
+.deletedForFavorites:hover {
+    background-color: var(--dark-grey);
 }
 
 .exitModal {
@@ -219,6 +248,11 @@
     }
 
     .addToFavorites {
+        padding: 12px 24px;
+        width: auto;
+    }
+
+    .deletedForFavorites {
         padding: 12px 24px;
         width: auto;
     }

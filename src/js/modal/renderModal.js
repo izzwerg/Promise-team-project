@@ -1,37 +1,20 @@
-import { searchExercises } from "./fetcher";
-import { addToFavorites } from "./addToFavorites";
-import { deleteForFavorites } from "./deleteForFavorites"
-import { exitModal } from "./exitModal";
-import { isObjectInLocalStorage } from "./isObjectInLocalStorage";
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
-
-const list = document.querySelector('.filtered-ex-item');
-const modalSection = document.querySelector('.section_modal')
-const containerModal = document.querySelector('.container_modal');
-
-list.addEventListener('click', async (event) => {
-    if (event.target.tagName === 'LI') {
-        const exercisesId = event.target.dataset.id;
-        try {
-            const exerciseData = await searchExercises(exercisesId);
-            renderExercise(exerciseData);
-            isObjectInLocalStorage(exercisesId);
-            addToFavorites(exerciseData);
-            deleteForFavorites(exerciseData);
-            exitModal(modalSection, containerModal);
-        } catch (error) {
-            console.log(error)
-            iziToast.error({
-                message: 'Error when trying to show the exercise'
-            });
-        }
-    }
-});
-
-function renderExercise({ gifUrl, name, rating, target, bodyPart, equipment, popularity, burnedCalories, description }) {
-    modalSection.classList.add('is-visible');
-    containerModal.innerHTML = `
+function renderExercise(
+  {
+    gifUrl,
+    name,
+    rating,
+    target,
+    bodyPart,
+    equipment,
+    popularity,
+    burnedCalories,
+    description,
+  },
+  modalSection,
+  containerModal
+) {
+  modalSection.classList.add('is-visible');
+  containerModal.innerHTML = `
     <img
       src="${gifUrl}"
       alt="${name}"
@@ -98,4 +81,5 @@ function renderExercise({ gifUrl, name, rating, target, bodyPart, equipment, pop
         </button>
     </div>
     `;
-};
+}
+export { renderExercise };
