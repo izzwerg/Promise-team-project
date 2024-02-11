@@ -276,7 +276,6 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
@@ -608,7 +607,6 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
@@ -931,7 +929,7 @@
     color: #1b1b1b;
     margin: 0;
 
-    text-wrap: nowrap;
+
     white-space: nowrap; /* Скасуємо перенесення тексту */
     overflow: hidden; /* Обрізаємо вміст */
     text-overflow: ellipsis;
