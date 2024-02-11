@@ -12,9 +12,9 @@
   
   <script type="module" crossorigin src="/Promise-team-project/commonHelpers2.js"></script>
   <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/vendor-8cce9181.js">
-  <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/qoute-69faa6a7.js">
+  <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/qoute-c3286b6a.js">
   <link rel="stylesheet" href="/Promise-team-project/assets/vendor-e5212ee8.css">
-  <link rel="stylesheet" href="/Promise-team-project/assets/qoute-39216c46.css">
+  <link rel="stylesheet" href="/Promise-team-project/assets/qoute-8b544bce.css">
 </head>
 
 <body>
@@ -180,15 +180,20 @@
       <button class="exercises-category active" id="muscle-btn">Muscles</button>
       <button class="exercises-category" id="body-btn">Body parts</button>
       <button class="exercises-category" id="equipment-btn">Equipment</button>
-    </div>
-    <div class="wrapper-exercises">
-     
+      <div class="search-container is-hidden">
+        <form>
+          <input type="text" placeholder="Search" name="search" class="search-input"/>
+          <button type="submit" class="search-button">
+            <svg width="18" height="18" class="search-icon">
+              <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#search"></use>
+            </svg>
+          </button>
+        </form>
       </div>
-      
-      <div class="pagination-wrapper">
-  
-      </div>
     </div>
+    <div class="wrapper-exercises"></div>
+
+    <div class="pagination-wrapper"></div>
   </div>
 </section>
 
