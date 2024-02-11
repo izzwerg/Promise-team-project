@@ -11,6 +11,7 @@ subscriptionForm.addEventListener('submit', onFormSubmit);
 
 async function onFormSubmit(event) {
   event.preventDefault();
+  subscriptionForm.reset();
 
   const userEmail = userSubmit.value;
 
