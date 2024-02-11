@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Promise-team-project/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnergyFlow</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <script type="module" crossorigin src="/Promise-team-project/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/vendor-8cce9181.js">
+    <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/qoute-f6ba7b9e.js">
+    <link rel="stylesheet" href="/Promise-team-project/assets/vendor-e5212ee8.css">
+    <link rel="stylesheet" href="/Promise-team-project/assets/qoute-98448f0a.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/Promise-team-project/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EnergyFlow</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
-    integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <script type="module" crossorigin src="/Promise-team-project/commonHelpers2.js"></script>
-  <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/vendor-8cce9181.js">
-  <link rel="modulepreload" crossorigin href="/Promise-team-project/assets/qoute-a5cf57bc.js">
-  <link rel="stylesheet" href="/Promise-team-project/assets/vendor-e5212ee8.css">
-  <link rel="stylesheet" href="/Promise-team-project/assets/qoute-c494d26c.css">
-</head>
-
-<body>
-  <header class="container head-position">
+  <body>
+    <header class="container head-position">
   <div class="head-style">
     <a class="head-logo" href="index.html">energy.flow</a>
     <nav class="head-nav">
@@ -114,7 +117,7 @@
 </div>
 
 
-  <!-- Hero------ -->
+    <!-- Hero------ -->
 <section class="hero">
     <div class="container hero-container">
         <div class="hero-bg">
@@ -144,7 +147,7 @@
         </div>
     </div>
 </section>
-  <section class="quote-main-section">
+    <section class="quote-main-section">
     
     <div class="quote-the-day-main">
         <div class="quote-with-text">
@@ -173,7 +176,7 @@
 
 
 
-  <section class="container exercises-section">
+    <section class="container exercises-section">
   <div class="exercises-wrapper">
     <h2 class="exercises-title">Exercises</h2>
     <div class="button-exercises">
@@ -182,7 +185,12 @@
       <button class="exercises-category" id="equipment-btn">Equipment</button>
       <div class="search-container is-hidden">
         <form>
-          <input type="text" placeholder="Search" name="search" class="search-input"/>
+          <input
+            type="text"
+            placeholder="Search"
+            name="search"
+            class="search-input"
+          />
           <button type="submit" class="search-button">
             <svg width="18" height="18" class="search-icon">
               <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#search"></use>
@@ -197,7 +205,7 @@
   </div>
 </section>
 
-  <section class="motivation" id="motivation">
+    <section class="motivation" id="motivation">
   <div class="container motivation-container">
     <div class="motivation-image-block"></div>
 
@@ -228,7 +236,7 @@
   </div>
 </section>
 
-  <footer class="footer container">
+    <footer class="footer container">
   <div class="footer-container">
     <div class="foooter-block">
       <div class="footer-info">
@@ -308,84 +316,14 @@
 </footer>
 
 
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 <section class="section_modal">
-  <div class="container_modal">
-    <img
-      src="https://ftp.goit.study/img/power-pulse/gifs/0003.gif"
-      alt="air bike"
-      class="gif"
-    />
-    <div class="info">
-      <h2 class="title">Air bike</h2>
-      <div class="raiting">
-        <p>4.0</p>
-        <div class="stars">
-          <svg class="icon">
-            <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#star"></use>
-          </svg>
-          <svg class="icon">
-            <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#star"></use>
-          </svg>
-          <svg class="icon">
-            <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#star"></use>
-          </svg>
-          <svg class="icon">
-            <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#star"></use>
-          </svg>
-          <svg class="icon">
-            <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#star"></use>
-          </svg>
-        </div>
-      </div>
-      <ul class="info_list">
-        <li class="info_el">
-          <p class="info_el_title">Target</p>
-          <p class="info_el_text">Abs</p>
-        </li>
-        <li class="info_el">
-          <p class="info_el_title">Body Part</p>
-          <p class="info_el_text">Waist</p>
-        </li>
-        <li class="info_el">
-          <p class="info_el_title">Equipment</p>
-          <p class="info_el_text">Body weight</p>
-        </li>
-        <li class="info_el">
-          <p class="info_el_title">Popular</p>
-          <p class="info_el_text">4</p>
-        </li>
-        <li class="info_el">
-          <p class="info_el_title">Burned calories</p>
-          <p class="info_el_text">312/3min</p>
-        </li>
-      </ul>
-      <p class="description">
-        This refers to your core muscles, which include the rectus abdominis,
-        obliques, and transverse abdominis. They're essential for maintaining
-        posture, stability, and generating force in many movements. Exercises
-        that target the abs include crunches, leg raises, and planks.
-      </p>
-      <button type="button" class="addToFavorites">
-        Add to favorites
-        <svg class="icon">
-          <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#heart"></use>
-        </svg>
-      </button>
-      <button type="button" class="deletedForFavorites">
-        Remove from favorites
-      </button>
-      <button type="button" class="exitModal">
-        <svg class="icon">
-          <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#close"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
+  <div class="container_modal"></div>
 </section>
 
-  
-  <!-- Scroll-to-top button -->
+
+    
+    <!-- Scroll-to-top button -->
 <button id="button-to-top" class="button-to-top" aria-label="Scroll to top" type="button">
     <svg class="button-to-top-svg">
         <use href="/Promise-team-project/assets/sprite-a52c12ca.svg#arrow-to-top"></use>
@@ -393,8 +331,8 @@
 </button>
 
 
-  
-  
-  
-</body>
+    
+    
+    
+  </body>
 </html>
