@@ -317,6 +317,42 @@ function changeFilteredPagination(newPageNumber) {
 
 
 
+function setSearchPagination() {
+  const paginationList = [];
+  paginationWrapper.classList.remove("scroll-x");
+  if (totalPages > 1) {
+    for (let i = 1; i <= totalPages; i++) {
+      paginationList.push(
+        `<span class="pagination-number ${
+          i === exercisePage ? 'active' : ''
+        }">${i}</span>`
+      );
+    }
+    paginationWrapper.innerHTML = paginationList.join('');
+    const paginationNumbers =
+      document.getElementsByClassName('pagination-number');
+    for (let i = 0; i < paginationNumbers.length; i++) {
+      paginationNumbers[i].addEventListener('click', function () {
+        changeSerchedPagination(i + 1);
+      });
+    }
+    if (totalPages > 12 && window.screen.width < 768) {
+      paginationWrapper.classList.add("scroll-x");
+    } else if (totalPages > 23 && window.screen.width < 1440) {
+      paginationWrapper.classList.add("scroll-x");
+    }
+  } else {
+    paginationWrapper.innerHTML = '';
+  }
+}
+
+function changeSerchedPagination(newPageNumber) {
+  if (newPageNumber === exercisePage) {
+    return;
+  }
+  exercisePage = newPageNumber;
+  performSearch();
+}
 
 // Оголошуємо змінну для зберігання останнього пошукового запиту
 let lastSearchQuery = '';
@@ -406,7 +442,7 @@ async function performSearch(query, filter, requestData) {
     totalPages = response.data.totalPages;
 
     if (totalPages > 1) {
-      setFilteredPagination();
+      setSearchPagination();
     }
     renderFilteredExercises();
   } catch (error) {
