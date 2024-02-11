@@ -61,7 +61,7 @@ function renderExercise(
                 </li>
                 <li class="info_el">
                 <p class="info_el_title">Popular</p>
-                <p class="info_el_text">${capitalizeText(popularity)}</p>
+                <p class="info_el_text">${popularity}</p>
                 </li>
                 <li class="info_el">
                 <p class="info_el_title">Burned calories</p>
