@@ -9,7 +9,7 @@ const muscleBtn = document.getElementById('muscle-btn');
 const bodyBtn = document.getElementById('body-btn');
 const equipmentBtn = document.getElementById('equipment-btn');
 const partHeader = document.querySelector('.exercises-title');
-const searchPlace = document.querySelector('.search-container')
+const searchPlace = document.querySelector('.search-container');
 
 let currentFilter = 'Muscles';
 
@@ -98,14 +98,16 @@ function renderExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  muscleList.classList.remove("desk-flex");
-  searchPlace.classList.add("is-hidden");
-  partHeader.innerHTML = "Exercises";
+  muscleList.classList.remove('desk-flex');
+  muscleList.classList.remove('tab-flex');
+  searchPlace.classList.add('is-hidden');
+  partHeader.innerHTML = 'Exercises';
   getByFilter(muscleList);
   exercisePage = 1;
 }
 
 function setPagination() {
+  if (totalPages > 1) {
   const paginationList = [];
   for (let i = 1; i <= totalPages; i++) {
     paginationList.push(
@@ -122,6 +124,9 @@ function setPagination() {
       changePagination(i + 1);
     });
   }
+} else {
+  paginationWrapper.innerHTML = '';
+}
 }
 
 function changePagination(newPageNumber) {
@@ -220,7 +225,9 @@ function renderFilteredExercises() {
               <p class="filtered-workout-text">workout</p>
           </div>
           <div class="filtered-rating-container">
-              <p class="filtered-rating-text">${Number(item.rating).toFixed(1)}</p>
+              <p class="filtered-rating-text">${Number(item.rating).toFixed(
+                1
+              )}</p>
               <div class="filtered-rating-icon-container">
               <svg class="filtered-rating-icon" width="14" height="14">
                   <use href="./img/sprite.svg#star"></use>
@@ -243,13 +250,19 @@ function renderFilteredExercises() {
       </div>
       <ul class="filtered-ex-desc-list">
           <li class="filtered-ex-desc-item">Burned calories:
-              <span class="filtered-ex-desc-value">${item.burnedCalories} / ${item.time} min</span>
+              <span class="filtered-ex-desc-value">${item.burnedCalories} / ${
+        item.time
+      } min</span>
           </li>
           <li class="filtered-ex-desc-item">Body part:
-              <span class="filtered-ex-desc-value">${capitalizeText(item.bodyPart)}</span>
+              <span class="filtered-ex-desc-value">${capitalizeText(
+                item.bodyPart
+              )}</span>
           </li>
           <li class="filtered-ex-desc-item">Target:
-              <span class="filtered-ex-desc-value">${capitalizeText(item.target)}</span>
+              <span class="filtered-ex-desc-value">${capitalizeText(
+                item.target
+              )}</span>
           </li>
       </ul>
   </div>`
@@ -257,29 +270,41 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  partHeader.insertAdjacentHTML('beforeend', ` / <span class="exercises-title-grey">${capitalizeText(dataList[0].bodyPart)}</span>`);
-  searchPlace.classList.remove("is-hidden")
+  partHeader.insertAdjacentHTML(
+    'beforeend',
+    ` / <span class="exercises-title-grey">${capitalizeText(
+      dataList[0].bodyPart
+    )}</span>`
+  );
+  searchPlace.classList.remove('is-hidden');
   if (window.screen.width >= 1440) {
-    muscleList.classList.add("desk-flex");
+    muscleList.classList.add('desk-flex');
+  }
+  if (window.screen.width >= 768 && window.screen.width < 1440) {
+    muscleList.classList.add('tab-flex');
   }
 }
 
 function setFilteredPagination() {
   const paginationList = [];
-  for (let i = 1; i <= totalPages; i++) {
-    paginationList.push(
-      `<span class="pagination-number ${
-        i === exercisePage ? 'active' : ''
-      }">${i}</span>`
-    );
-  }
-  paginationWrapper.innerHTML = paginationList.join('');
-  const paginationNumbers =
-    document.getElementsByClassName('pagination-number');
-  for (let i = 0; i < paginationNumbers.length; i++) {
-    paginationNumbers[i].addEventListener('click', function () {
-      changeFilteredPagination(i + 1);
-    });
+  if (totalPages > 1) {
+    for (let i = 1; i <= totalPages; i++) {
+      paginationList.push(
+        `<span class="pagination-number ${
+          i === exercisePage ? 'active' : ''
+        }">${i}</span>`
+      );
+    }
+    paginationWrapper.innerHTML = paginationList.join('');
+    const paginationNumbers =
+      document.getElementsByClassName('pagination-number');
+    for (let i = 0; i < paginationNumbers.length; i++) {
+      paginationNumbers[i].addEventListener('click', function () {
+        changeFilteredPagination(i + 1);
+      });
+    }
+  } else {
+    paginationWrapper.innerHTML = '';
   }
 }
 
