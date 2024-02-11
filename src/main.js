@@ -271,7 +271,7 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  if (exercisePage == 1) {partHeader.insertAdjacentHTML(
+  if (exercisePage === 1 && partHeader.textContent === "Exercises") {partHeader.insertAdjacentHTML(
     'beforeend',
     ` / <span class="exercises-title-grey">${capitalizeText(
       dataList[0].bodyPart
