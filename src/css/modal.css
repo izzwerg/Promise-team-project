@@ -80,10 +80,6 @@
     gap: 2px;
 }
 
-.stars .icon:nth-child(n+4) {
-    fill: var(--orange);
-}
-
 .icon {
     width: 14px;
     height: 14px;
@@ -137,6 +133,13 @@
     color: rgb(27, 27, 27, 0.6);
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 9px;
+}
+
 
 .addToFavorites {
     display: flex;
@@ -158,20 +161,21 @@
     background-color: var(--dark-grey);
 }
 
-.addToFavorites .icon {
+.addToFavorites .iconHeart {
     width: 18px;
     height: 18px;
     margin-left: 8px;
     stroke: var(--white);
     fill: var(--grey);
+    transform: translateY(4px);
     transition: fill 0.3s ease;
 }
 
-.addToFavorites:active .icon {
+.addToFavorites:active .iconHeart {
     fill: var(--dark-grey);
 }
 
-.addToFavorites:hover .icon {
+.addToFavorites:hover .iconHeart {
     fill: var(--dark-grey);
 }
 
@@ -193,6 +197,18 @@
 
 .deletedForFavorites:hover {
     background-color: var(--dark-grey);
+}
+
+.giveRating {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid var(--black);
+    border-radius: 30px;
+    color: var(--black);
+    background-color: var(--white);
+    transition: background-color 0.3s ease;
 }
 
 .exitModal {
@@ -247,12 +263,22 @@
         height: 18px;
     }
 
+    .buttons {
+        flex-direction: row;
+        gap: 7px;
+    }
+
     .addToFavorites {
         padding: 12px 24px;
         width: auto;
     }
 
     .deletedForFavorites {
+        padding: 12px 24px;
+        width: auto;
+    }
+
+    .giveRating {
         padding: 12px 24px;
         width: auto;
     }
