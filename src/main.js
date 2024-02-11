@@ -10,6 +10,8 @@ const equipmentBtn = document.getElementById('equipment-btn');
 const partHeader = document.querySelector('.exercises-title');
 const searchPlace = document.querySelector('.search-container');
 
+const searchForm = document.getElementById('searchForm');
+
 let currentFilter = 'Muscles';
 
 let selectedBtn = 'muscle-btn';
@@ -312,3 +314,117 @@ function changeFilteredPagination(newPageNumber) {
   exercisePage = newPageNumber;
   getFilteredExerrcises();
 }
+
+// Оголошуємо змінну для зберігання останнього пошукового запиту
+let lastSearchQuery = '';
+
+// Додавання обробника подій для відправки форми пошуку
+searchForm.addEventListener('submit', async function (event) {
+  event.preventDefault(); // Зупиняємо стандартну поведінку форми
+
+  const formData = new FormData(searchForm);
+  const searchQuery = formData.get('search');
+  const filter = formData.get('filter');
+  const subcategory = formData.get('subcategory');
+
+  if (searchQuery.trim() !== '') { // Перевіряємо, чи не пустий запит
+    // Зберігаємо значення останнього пошукового запиту
+    lastSearchQuery = searchQuery;
+
+    // Перевіряємо вибраний фільтр та підвид
+    let filterCheck = document.querySelector('.active');
+    let requestData;
+
+    if (filterCheck.textContent == 'Body parts') {
+      requestData = {
+        bodypart: exerciseName,
+        limit: setExercisesLimit(),
+        page: exercisePage,
+        subcategory: subcategory // Додаємо значення підвиду
+      };
+    }
+    if (filterCheck.textContent == 'Muscles') {
+      requestData = {
+        muscles: exerciseName,
+        limit: setExercisesLimit(),
+        page: exercisePage,
+        subcategory: subcategory // Додаємо значення підвиду
+      };
+    }
+    if (filterCheck.textContent == 'Equipment') {
+      requestData = {
+        equipment: exerciseName,
+        limit: setExercisesLimit(),
+        page: exercisePage,
+        subcategory: subcategory // Додаємо значення підвиду
+      };
+    }
+
+    await performSearch(searchQuery, filter, requestData); // Викликаємо функцію для виконання пошуку
+    searchForm.reset(); // Очищення поля пошуку
+  }
+});
+
+// Обробка натискання на пагінацію
+paginationWrapper.addEventListener('click', function (event) {
+  if (event.target.classList.contains('page-link')) {
+    event.preventDefault();
+    // Отримуємо номер сторінки, на яку клікнули
+    const page = parseInt(event.target.dataset.page);
+    // Викликаємо функцію для виконання пошуку з попереднім пошуковим запитом
+    performSearch(lastSearchQuery, filter, { page: page });
+  }
+});
+
+// Функція для виконання пошуку
+async function performSearch(query, filter, requestData) {
+  const apiUrl = 'https://energyflow.b.goit.study/api/exercises';
+  const searchData = {
+    keyword: query, // Використовуємо ключове слово для параметра keyword
+    limit: setExercisesLimit(), // Встановлюємо ліміт вправ на сторінці
+    page: exercisePage, // Встановлюємо порядковий номер сторінки
+    filter: filter // Додаємо значення фільтру
+  };
+
+  const requestDataMerged = { ...searchData, ...requestData }; // Об'єднуємо дані пошуку з додатковими параметрами
+
+  try {
+    const response = await axios.get(
+      `${apiUrl}?${new URLSearchParams(requestDataMerged)}`
+    );
+    
+    if (response.data.results.length === 0) {
+      showNoResultsMessage();
+      return;
+    }
+
+    // Якщо є дані, оновлюємо відображення результатів і пагінацію
+    dataList = response.data.results;
+    totalPages = response.data.totalPages;
+
+    if (totalPages > 1) {
+      setFilteredPagination();
+    }
+
+    renderFilteredExercises();
+  } catch (error) {
+    iziToast.error({
+      title: 'Error',
+      message: `Something went wrong. Please try again later.`,
+      position: 'topRight',
+    });
+  }
+}
+
+// Функція для показу повідомлення про відсутність результатів
+function showNoResultsMessage() {
+  paginationWrapper.style.display = 'none';
+  exercisesWrapper.innerHTML = `
+    <div class="wrapper-exercises">
+      <p class="no-search-server">Unfortunately, <span class="gray-world-server">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>
+    </div>
+  `;
+}
+
+
+
