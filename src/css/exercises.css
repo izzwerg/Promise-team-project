@@ -1003,5 +1003,4 @@
 .scroll-x {
   overflow-x: scroll;
   justify-content: flex-start;
-  border-radius: 16px;
 }
