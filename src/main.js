@@ -1,6 +1,7 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { openModal } from './js/modal/openModal';
 
 const exercisesWrapper = document.querySelector('.wrapper-exercises');
 const paginationWrapper = document.querySelector('.pagination-wrapper');
@@ -66,6 +67,7 @@ async function getExercises() {
     renderExercises();
     setPagination();
   } catch (error) {
+    console.log(error);
     iziToast.error({
       title: 'Error',
       message: `Something went wrong. Please try again later.`,
@@ -210,7 +212,7 @@ function setExercisesLimit() {
 function renderFilteredExercises() {
   const newData = dataList
     .map(
-      item => `<div class="filtered-ex-item" data-id="${item._id}">
+      item => `<div class="filtered-ex-item">
       <div class="filtered-ex-item-header">
           <div class="filtered-workout-box">
               <p class="filtered-workout-text">workout</p>
@@ -225,7 +227,7 @@ function renderFilteredExercises() {
               </svg>
               </div>
           </div>
-          <button class="filtered-start-ex-btn" type="button">Start
+          <button class="filtered-start-ex-btn" type="button" data-id="${item._id}">Start
               <svg class="filtered-start-arrow-icon" width="14" height="14">
                   <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
               </svg>
@@ -261,6 +263,7 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
+  openModal();
   if (exercisePage === 1 && partHeader.textContent === "Exercises") {partHeader.insertAdjacentHTML(
     'beforeend',
     ` / <span class="exercises-title-grey">${capitalizeText(
