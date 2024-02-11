@@ -34,6 +34,7 @@ async function onFormSubmit(event) {
     }
   } catch (response) {
     if (response.message === 'Request failed with status code 409') {
+      subscriptionForm.reset();
       iziToast.info({
         title: 'Info',
         message: 'Subscription already exists',
