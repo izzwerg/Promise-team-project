@@ -1,6 +1,7 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { openModal } from './js/modal/openModal';
 
 const exercisesWrapper = document.querySelector('.wrapper-exercises');
 const paginationWrapper = document.querySelector('.pagination-wrapper');
@@ -68,6 +69,7 @@ async function getExercises() {
     renderExercises();
     setPagination();
   } catch (error) {
+    console.log(error);
     iziToast.error({
       title: 'Error',
       message: `Something went wrong. Please try again later.`,
@@ -99,27 +101,27 @@ function renderExercises() {
 }
 
 function setPagination() {
-  paginationWrapper.classList.remove("scroll-x");
+  paginationWrapper.classList.remove('scroll-x');
   if (totalPages > 1) {
-  const paginationList = [];
-  for (let i = 1; i <= totalPages; i++) {
-    paginationList.push(
-      `<span class="pagination-number ${
-        i === page ? 'active' : ''
-      }">${i}</span>`
-    );
+    const paginationList = [];
+    for (let i = 1; i <= totalPages; i++) {
+      paginationList.push(
+        `<span class="pagination-number ${
+          i === page ? 'active' : ''
+        }">${i}</span>`
+      );
+    }
+    paginationWrapper.innerHTML = paginationList.join('');
+    const paginationNumbers =
+      document.getElementsByClassName('pagination-number');
+    for (let i = 0; i < paginationNumbers.length; i++) {
+      paginationNumbers[i].addEventListener('click', function () {
+        changePagination(i + 1);
+      });
+    }
+  } else {
+    paginationWrapper.innerHTML = '';
   }
-  paginationWrapper.innerHTML = paginationList.join('');
-  const paginationNumbers =
-    document.getElementsByClassName('pagination-number');
-  for (let i = 0; i < paginationNumbers.length; i++) {
-    paginationNumbers[i].addEventListener('click', function () {
-      changePagination(i + 1);
-    });
-  }
-} else {
-  paginationWrapper.innerHTML = '';
-}
 }
 
 function changePagination(newPageNumber) {
@@ -212,7 +214,7 @@ function setExercisesLimit() {
 function renderFilteredExercises() {
   const newData = dataList
     .map(
-      item => `<div class="filtered-ex-item" data-id="${item._id}">
+      item => `<div class="filtered-ex-item">
       <div class="filtered-ex-item-header">
           <div class="filtered-workout-box">
               <p class="filtered-workout-text">workout</p>
@@ -227,7 +229,9 @@ function renderFilteredExercises() {
               </svg>
               </div>
           </div>
-          <button class="filtered-start-ex-btn" type="button">Start
+          <button class="filtered-start-ex-btn" type="button" data-id="${
+            item._id
+          }">Start
               <svg class="filtered-start-arrow-icon" width="14" height="14">
                   <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
               </svg>
@@ -263,12 +267,15 @@ function renderFilteredExercises() {
     .join('');
   const muscleList = document.querySelector('.muscles-list');
   muscleList.innerHTML = newData;
-  if (exercisePage === 1 && partHeader.textContent === "Exercises") {partHeader.insertAdjacentHTML(
-    'beforeend',
-    ` / <span class="exercises-title-grey">${capitalizeText(
-      dataList[0].bodyPart
-    )}</span>`
-  );}
+  openModal();
+  if (exercisePage === 1 && partHeader.textContent === 'Exercises') {
+    partHeader.insertAdjacentHTML(
+      'beforeend',
+      ` / <span class="exercises-title-grey">${capitalizeText(
+        dataList[0].bodyPart
+      )}</span>`
+    );
+  }
   searchPlace.classList.remove('is-hidden');
   if (window.screen.width >= 1440) {
     muscleList.classList.add('desk-flex');
@@ -280,7 +287,7 @@ function renderFilteredExercises() {
 
 function setFilteredPagination() {
   const paginationList = [];
-  paginationWrapper.classList.remove("scroll-x");
+  paginationWrapper.classList.remove('scroll-x');
   if (totalPages > 1) {
     for (let i = 1; i <= totalPages; i++) {
       paginationList.push(
@@ -298,9 +305,9 @@ function setFilteredPagination() {
       });
     }
     if (totalPages > 12 && window.screen.width < 768) {
-      paginationWrapper.classList.add("scroll-x");
+      paginationWrapper.classList.add('scroll-x');
     } else if (totalPages > 23 && window.screen.width < 1440) {
-      paginationWrapper.classList.add("scroll-x");
+      paginationWrapper.classList.add('scroll-x');
     }
   } else {
     paginationWrapper.innerHTML = '';
@@ -314,6 +321,7 @@ function changeFilteredPagination(newPageNumber) {
   exercisePage = newPageNumber;
   getFilteredExerrcises();
 }
+
 
 
 
@@ -461,6 +469,7 @@ function showNoResultsMessage() {
     </div>
   `;
 }
+
 
 
 

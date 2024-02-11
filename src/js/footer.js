@@ -24,6 +24,7 @@ async function onFormSubmit(event) {
 
   try {
     const response = await axios.post(BASE_URL, { email: userEmail });
+    subscriptionForm.reset();
     if (response.status === 201) {
       iziToast.info({
         title: 'Info',
@@ -33,6 +34,7 @@ async function onFormSubmit(event) {
     }
   } catch (response) {
     if (response.message === 'Request failed with status code 409') {
+      subscriptionForm.reset();
       iziToast.info({
         title: 'Info',
         message: 'Subscription already exists',
