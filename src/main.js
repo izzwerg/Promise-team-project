@@ -316,6 +316,8 @@ function changeFilteredPagination(newPageNumber) {
 }
 
 
+
+
 // Оголошуємо змінну для зберігання останнього пошукового запиту
 let lastSearchQuery = '';
 
@@ -403,12 +405,9 @@ async function performSearch(query, filter, requestData) {
     dataList = response.data.results;
     totalPages = response.data.totalPages;
 
-    if (response.data.perPage >= 9 && totalPages > 1) {
+    if (totalPages > 1) {
       setFilteredPagination();
-    } else {
-      paginationWrapper.style.display = 'none'; 
     }
-
     renderFilteredExercises();
   } catch (error) {
     iziToast.error({
@@ -421,7 +420,6 @@ async function performSearch(query, filter, requestData) {
 
 // Функція для показу повідомлення про відсутність результатів
 function showNoResultsMessage() {
-  paginationWrapper.style.display = 'none';
   exercisesWrapper.innerHTML = `
     <div class="wrapper-exercises">
       <p class="no-search-server">Unfortunately, <span class="gray-world-server">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>
