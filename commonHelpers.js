@@ -1,4 +1,4 @@
-import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.js";function b(){const s=JSON.parse(localStorage.getItem("favorites"))||[],u=s.map(e=>`<li class="fav-ex-item">
+import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.js";function b(){let e=JSON.parse(localStorage.getItem("favorites"))||[];const u=e.map(s=>`<li class="fav-ex-item">
       <div class="fav-ex-item-header">
           <div class="fav-workout-box">
               <p class="fav-workout-text">workout</p>
@@ -8,7 +8,7 @@ import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.j
                     <use href="./assets/sprite-a52c12ca.svg#trash"></use>
                 </svg>
           </button>
-          <button class="fav-start-ex-btn filtered-start-ex-btn" type="button" data-id="${e._id}">Start
+          <button class="fav-start-ex-btn filtered-start-ex-btn" type="button" data-id="${s._id}">Start
               <svg class="fav-start-arrow-icon" width="14" height="14">
                   <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
               </svg>
@@ -20,17 +20,17 @@ import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.j
                   <use href="./assets/sprite-a52c12ca.svg#runner"></use>
               </svg>
           </div>
-          <p class="fav-ex-name">${r(e.name)}</p>
+          <p class="fav-ex-name">${r(s.name)}</p>
       </div>
       <ul class="fav-ex-desc-list">
           <li class="fav-ex-desc-item">Burned calories:
-              <span class="fav-ex-desc-value">${e.burnedCalories} / ${e.time} min</span>
+              <span class="fav-ex-desc-value">${s.burnedCalories} / ${s.time} min</span>
           </li>
           <li class="fav-ex-desc-item">Body part:
-              <span class="fav-ex-desc-value">${r(e.bodyPart)}</span>
+              <span class="fav-ex-desc-value">${r(s.bodyPart)}</span>
           </li>
           <li class="fav-ex-desc-item">Target:
-              <span class="fav-ex-desc-value">${r(e.target)}</span>
+              <span class="fav-ex-desc-value">${r(s.target)}</span>
           </li>
       </ul>
   </div>`).join(""),v=`
@@ -38,7 +38,7 @@ import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.j
         <div class="dumbbell-img"></div>
         <p class="no-fav-text">It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>
       </div>
-    `,o=window.innerWidth;let a;o<768?a=8:a=s.length;const p=document.querySelector(".no-fav-ex-inner"),d=document.querySelector(".fav-ex-list"),f=document.querySelector(".fav-pag-btn-set");if(s.length===0?p&&(p.innerHTML=v):d&&(d.innerHTML=u,g()),a<s.length&&f){const e=document.createDocumentFragment(),c=Math.ceil(s.length/a);for(let i=1;i<=c;i++){const t=document.createElement("button");t.classList.add("fav-pagination-btn"),t.textContent=i,t.addEventListener("click",()=>{const l=(i-1)*a,h=l+a,m=s.slice(l,h).map(n=>`<li class="fav-ex-item">
+    `,o=window.innerWidth;let a;o<768?a=8:a=e.length;const p=document.querySelector(".no-fav-ex-inner"),d=document.querySelector(".fav-ex-list"),f=document.querySelector(".fav-pag-btn-set");if(e.length===0?p&&(p.innerHTML=v):d&&(d.innerHTML=u,g()),a<e.length&&f){const s=document.createDocumentFragment(),c=Math.ceil(e.length/a);for(let i=1;i<=c;i++){const t=document.createElement("button");t.classList.add("fav-pagination-btn"),t.textContent=i,t.addEventListener("click",()=>{const l=(i-1)*a,h=l+a,m=e.slice(l,h).map(n=>`<li class="fav-ex-item">
               <div class="fav-ex-item-header">
                   <div class="fav-workout-box">
                       <p class="fav-workout-text">workout</p>
@@ -73,5 +73,5 @@ import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.j
                       <span class="fav-ex-desc-value">${r(n.target)}</span>
                   </li>
               </ul>
-          </div>`).join("");d.innerHTML=m,g()}),c>9&&o<768?t.classList.add("fav-pagi-btn-overflow"):t.classList.remove("fav-pagi-btn-overflow"),e.appendChild(t)}f.innerHTML="",f.appendChild(e)}const x=document.querySelectorAll(".fav-delete-btn");Array.from(x).forEach(e=>{e.addEventListener("click",()=>{const c=e.closest(".fav-ex-item"),i=c.querySelector(".fav-start-ex-btn").dataset.id;c.remove();const t=s.filter(l=>l._id!==i);localStorage.setItem("favorites",JSON.stringify(t))})})}function r(s){if(!s.length)return"";const v=s.charAt(0).toUpperCase(),o=s.slice(1);return v+o}b();
+          </div>`).join("");d.innerHTML=m,g()}),c>9&&o<768?t.classList.add("fav-pagi-btn-overflow"):t.classList.remove("fav-pagi-btn-overflow"),s.appendChild(t)}f.innerHTML="",f.appendChild(s)}const x=document.querySelectorAll(".fav-delete-btn");Array.from(x).forEach(s=>{s.addEventListener("click",()=>{const c=s.closest(".fav-ex-item"),i=c.querySelector(".fav-start-ex-btn").dataset.id;c.remove();const t=e.filter(l=>l._id!==i);localStorage.setItem("favorites",JSON.stringify(t)),e=t})})}function r(e){if(!e.length)return"";const v=e.charAt(0).toUpperCase(),o=e.slice(1);return v+o}b();
 //# sourceMappingURL=commonHelpers.js.map
