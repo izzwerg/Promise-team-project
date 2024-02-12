@@ -1,4 +1,4 @@
-import{o as g}from"./assets/qoute-df1053f0.js";import"./assets/vendor-8cce9181.js";function x(){let e=JSON.parse(localStorage.getItem("favorites"))||[];const u=e.map(s=>`<li class="fav-ex-item">
+import{o as g}from"./assets/qoute-9831cd22.js";import"./assets/vendor-8cce9181.js";function x(){let e=JSON.parse(localStorage.getItem("favorites"))||[];const u=e.map(s=>`<li class="fav-ex-item">
       <div class="fav-ex-item-header">
           <div class="fav-workout-box">
               <p class="fav-workout-text">workout</p>
