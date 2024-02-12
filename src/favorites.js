@@ -107,7 +107,7 @@ function renderFilteredFavExercises() {
                             <use href="./assets/sprite-a52c12ca.svg#trash"></use>
                         </svg>
                   </button>
-                  <button class="fav-start-ex-btn" type="button" data-id="${
+                  <button class="fav-start-ex-btn filtered-start-ex-btn" type="button" data-id="${
                     item._id
                   }">Start
                       <svg class="fav-start-arrow-icon" width="14" height="14">

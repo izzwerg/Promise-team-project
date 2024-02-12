@@ -170,7 +170,7 @@
         sans-serif;
     font-weight: 400;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 1.2;
     color: #1b1b1b;
     margin: 0;
     margin-left: 16px;
@@ -240,7 +240,7 @@
     color: #1b1b1b;
 }
 
-/* .fav-pagination-btn:focus {
+.fav-pagination-btn:focus {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,7 +255,7 @@
     line-height: 160%;
     letter-spacing: 0.04em;
     color: #1b1b1b;
-} */
+}
 
 /* MOBILE */
 
@@ -301,6 +301,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 14px;
+        max-height: 720px;
+        overflow-y: scroll;
+        margin-top: -110px;
     }
 
     .fav-ex-item {
@@ -356,6 +359,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
+        max-height: 479px;
+        overflow-y: scroll;
+        margin-top: -50px;
     }
 
     .fav-ex-item {
