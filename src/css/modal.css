@@ -22,12 +22,13 @@
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     height: max-content;
-    max-height: none;
+    max-height: 824px;
     max-width: 335px;
+    min-width: max-content;
     background-color: var(--white);
     border-radius: 20px;
     z-index: 2;
-    overflow: auto;
+    overflow-y: auto;
     margin: auto;
 }
 
@@ -37,6 +38,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    height: max-content;
     width: 335px;
     padding: 40px 20px;
 }
@@ -274,12 +276,12 @@
     }
 
     .deletedForFavorites {
-        padding: 12px 24px;
+        padding: 12px 20px;
         width: auto;
     }
 
     .giveRating {
-        padding: 12px 24px;
+        padding: 12px 20px;
         width: auto;
     }
 }
