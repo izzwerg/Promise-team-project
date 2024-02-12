@@ -26,6 +26,19 @@
     fill: #F6F6F6;
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) {
+    #button-to-top {
+        width: 65px;
+        height: 65px;
+    }
+
+    .button-to-top-svg {
+        width: 33px;
+        height: 33px;
+    }
+}
+
 /* Desktop 1440 */
 @media screen and (min-width: 1440px) {
     #button-to-top {
