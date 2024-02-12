@@ -144,7 +144,7 @@
 .fav-ex-name-box {
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     margin-bottom: 8px;
 }
 
@@ -255,6 +255,11 @@
     line-height: 160%;
     letter-spacing: 0.04em;
     color: #1b1b1b;
+}
+
+.fav-pagi-btn-overflow {
+    overflow-x: scroll;
+    justify-content: flex-start;
 }
 
 /* MOBILE */

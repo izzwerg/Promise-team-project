@@ -82,6 +82,10 @@ function renderFilteredFavExercises() {
     }
   }
 
+  if (totalPages > 9) {
+    button.classList.add('fav-pagi-btn-overflow');
+  }
+
   if (itemsPerPage < favorites.length) {
     if (paginationContainer) {
       const fragment = document.createDocumentFragment();
