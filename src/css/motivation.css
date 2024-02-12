@@ -1,7 +1,10 @@
 /* Mobile */
+.motivation {
+    padding-bottom: 20px;
+}
+
 .motivation-container {
     min-width: 320px;
-    margin-bottom: 20px;
 }
 
 .motivation-image-block {
@@ -62,13 +65,13 @@
 }
 
 .motivation-paragraph-item.first-p {
-    padding-bottom: 14px;
+    margin-bottom: 14px;
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-    .motivation-container {
-        margin-bottom: 16px;
+    .motivation {
+        padding-bottom: 16px;
     }
 
     .motivation-image-block {
