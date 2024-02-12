@@ -22,10 +22,11 @@ let page = 1;
 let dataList;
 let exerciseName;
 let exercisePage = 1;
+let isOpenSublist = false;
 
 [muscleBtn, bodyBtn, equipmentBtn].forEach(btn => {
   btn.addEventListener('click', function () {
-    if (selectedBtn !== btn.id) {
+    if (selectedBtn !== btn.id || isOpenSublist) {
       changeActiveBtn(btn.id);
       selectedBtn = btn.id;
       page = 1;
@@ -66,6 +67,7 @@ async function getExercises() {
     exercisesWrapper.innerHTML = `<div class="muscles-list"></div>`;
     dataList = response.data.results;
     totalPages = response.data.totalPages;
+    isOpenSublist = false;
     renderExercises();
     setPagination();
   } catch (error) {
@@ -192,7 +194,7 @@ async function getFilteredExerrcises() {
     exercisesWrapper.innerHTML = `<div class="muscles-list"></div>`;
     dataList = response.data.results;
     totalPages = response.data.totalPages;
-
+    isOpenSublist = true;
     renderFilteredExercises();
     setFilteredPagination();
   } catch (error) {
@@ -322,9 +324,6 @@ function changeFilteredPagination(newPageNumber) {
   getFilteredExerrcises();
 }
 
-
-
-
 // Глобальні змінні для зберігання значень параметрів пошуку
 let lastSearchQuery = '';
 let filter = '';
@@ -332,7 +331,7 @@ let subcategory = '';
 
 function setSearchPagination() {
   const paginationList = [];
-  paginationWrapper.classList.remove("scroll-x");
+  paginationWrapper.classList.remove('scroll-x');
   if (totalPages > 1) {
     for (let i = 1; i <= totalPages; i++) {
       paginationList.push(
@@ -350,9 +349,9 @@ function setSearchPagination() {
       });
     }
     if (totalPages > 12 && window.screen.width < 768) {
-      paginationWrapper.classList.add("scroll-x");
+      paginationWrapper.classList.add('scroll-x');
     } else if (totalPages > 23 && window.screen.width < 1440) {
-      paginationWrapper.classList.add("scroll-x");
+      paginationWrapper.classList.add('scroll-x');
     }
   } else {
     paginationWrapper.innerHTML = '';
@@ -369,16 +368,16 @@ function changeSerchedPagination(newPageNumber) {
 
 // Додавання обробника подій для відправки форми пошуку
 searchForm.addEventListener('submit', async function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   const formData = new FormData(searchForm);
   lastSearchQuery = formData.get('search').trim(); // Зберігаємо значення останнього пошукового запиту
   filter = formData.get('filter');
   subcategory = formData.get('subcategory');
 
-  if (lastSearchQuery !== '') { 
-    await performSearch(); 
-    searchForm.reset(); 
+  if (lastSearchQuery !== '') {
+    await performSearch();
+    searchForm.reset();
   }
 });
 
@@ -400,7 +399,7 @@ async function performSearch() {
     keyword: lastSearchQuery, // Використовуємо ключове слово для параметра keyword
     limit: setExercisesLimit(), // Встановлюємо ліміт вправ на сторінці
     page: exercisePage, // Встановлюємо порядковий номер сторінки
-    filter: filter // Додаємо значення фільтру
+    filter: filter, // Додаємо значення фільтру
   };
 
   let requestData;
@@ -411,7 +410,7 @@ async function performSearch() {
       bodypart: exerciseName,
       limit: setExercisesLimit(),
       page: exercisePage,
-      subcategory: subcategory // Додаємо значення підвиду
+      subcategory: subcategory, // Додаємо значення підвиду
     };
   }
   if (filterCheck.textContent == 'Muscles') {
@@ -419,7 +418,7 @@ async function performSearch() {
       muscles: exerciseName,
       limit: setExercisesLimit(),
       page: exercisePage,
-      subcategory: subcategory 
+      subcategory: subcategory,
     };
   }
   if (filterCheck.textContent == 'Equipment') {
@@ -427,7 +426,7 @@ async function performSearch() {
       equipment: exerciseName,
       limit: setExercisesLimit(),
       page: exercisePage,
-      subcategory: subcategory 
+      subcategory: subcategory,
     };
   }
 
@@ -437,7 +436,7 @@ async function performSearch() {
     const response = await axios.get(
       `${apiUrl}?${new URLSearchParams(requestDataMerged)}`
     );
-    
+
     if (response.data.results.length === 0) {
       showNoResultsMessage();
       return;
@@ -462,14 +461,10 @@ async function performSearch() {
 
 // Функція для показу повідомлення про відсутність результатів
 function showNoResultsMessage() {
-  paginationWrapper.innerHTML = ''; 
+  paginationWrapper.innerHTML = '';
   exercisesWrapper.innerHTML = `
     <div class="wrapper-exercises">
       <p class="no-search-server">Unfortunately, <span class="gray-world-server">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p>
     </div>
   `;
 }
-
-
-
-
