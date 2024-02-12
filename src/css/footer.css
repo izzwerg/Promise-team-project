@@ -152,7 +152,6 @@
   line-height: 83%;
   letter-spacing: -0.02em;
   color: var(--white);
-  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer-container {
