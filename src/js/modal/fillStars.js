@@ -1,8 +1,5 @@
-import { searchExercises } from './fetcher';
-
-async function fillStars(exerciseId) {
+async function fillStars(exerciseData) {
   try {
-    const exerciseData = await searchExercises(exerciseId);
     const roundedRating = Math.floor(exerciseData.rating);
     const iconsStars = document.querySelectorAll('.icon');
 

@@ -26,7 +26,7 @@ export const openModal = () => {
           exercisesId
         );
         document.body.style.overflow = 'hidden';
-        fillStars(exercisesId);
+        fillStars(exerciseData);
         isObjectInLocalStorage(exercisesId);
         addToFavorites(exerciseData);
         deleteForFavorites(exerciseData);

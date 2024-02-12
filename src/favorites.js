@@ -210,3 +210,4 @@ export function capitalizeText(text) {
 }
 
 renderFilteredFavExercises();
+export { renderFilteredFavExercises };
