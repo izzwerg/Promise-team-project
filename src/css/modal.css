@@ -20,7 +20,8 @@
     top: 20px;
     bottom: 20px;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    max-width: 335px;
+    height: fit-content;
     max-height: calc(100% - 40px);
     background-color: var(--white);
     border-radius: 20px;
@@ -234,7 +235,8 @@
         left: 26px;
         right: 26px;
         max-width: 716px;
-        max-height: none;
+        max-height: fit-content;
+        height: fit-content;
     }
 
     .container_modal {
@@ -288,7 +290,6 @@
 @media screen and (min-width: 1440px) {
     .section_modal {
         width: 732px;
-        max-height: none;
         overflow: hidden;
     }
 
