@@ -69,27 +69,48 @@
     line-height: 18px;
     text-align: left;
     margin-bottom: 8px;
-
 }
 
-.starability-basic {
-    color: var(--black); /* Колір неактивних зірок */
+
+.rating-star-form {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    gap: 2px;
+    flex-direction: row-reverse;
 }
 
-.starability-basic:hover {
-    color: var(--orange); /* Колір зірок при наведенні */
+.rating-star-form label {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
-.starability-basic input:checked ~ label {
-    color: var(--orange); /* Колір активних зірок після вибору */
+.rating-star-form label.disabled svg {
+    fill: #1B1B1B33; 
 }
   
+
+.rating-star-form input {
+    display: none; 
+}
+
+.rating-star-form label svg {
+    fill: #1B1B1B33;
+}
+
+.rating-star-form input:checked ~ label svg {
+    fill:var(--orange); 
+} 
+
 
 .rating-rating{
     text-align: left;
     display: flex;
     gap: 2px;
-    /* width: 149px; */
+    width: 149px;
     height: 24px;
 }
 
