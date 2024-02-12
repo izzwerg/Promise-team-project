@@ -1,4 +1,4 @@
-import { openModal } from './js/modal/openModal.js';
+import { openModal } from './js/modal/openModal';
 
 function renderFilteredFavExercises() {
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
