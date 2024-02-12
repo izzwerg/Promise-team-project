@@ -145,6 +145,28 @@ function renderFilteredFavExercises() {
             .join('');
           favExercisesContainer.innerHTML = slicedDataHTML;
           openModal();
+          const deleteButtons = document.querySelectorAll('.fav-delete-btn');
+          Array.from(deleteButtons).forEach(button => {
+            button.addEventListener('click', () => {
+              const listItem = button.closest('.fav-ex-item');
+              const itemId =
+                listItem.querySelector('.fav-start-ex-btn').dataset.id;
+
+              // Remove the item from the list
+              listItem.remove();
+
+              // Remove the item from local storage
+              let updatedFavorites = favorites.filter(
+                item => item._id !== itemId
+              );
+              localStorage.setItem(
+                'favorites',
+                JSON.stringify(updatedFavorites)
+              );
+              favorites = updatedFavorites;
+              renderFilteredFavExercises();
+            });
+          });
         });
         if (totalPages > 9 && screenWidth < 768) {
           button.classList.add('fav-pagi-btn-overflow');
