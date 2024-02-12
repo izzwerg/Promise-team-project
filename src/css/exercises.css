@@ -344,7 +344,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 14px;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
 
 
   }
@@ -700,7 +700,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
 
 
 
@@ -1059,7 +1059,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 18px;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
 
 
 
