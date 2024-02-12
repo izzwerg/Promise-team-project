@@ -22,7 +22,7 @@
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     height: max-content;
-    max-height: 824px;
+    max-height: none;
     max-width: 335px;
     background-color: var(--white);
     border-radius: 20px;
@@ -233,7 +233,7 @@
         left: 26px;
         right: 26px;
         max-width: 716px;
-        max-height: 470px;
+        max-height: none;
     }
 
     .container_modal {
@@ -242,7 +242,7 @@
         align-items: flex-start;
         width: 716px;
         height: 100%;
-        max-height: 470px;
+        max-height: none;
         padding: 40px;
     }
 
@@ -287,7 +287,7 @@
 @media screen and (min-width: 1440px) {
     .section_modal {
         width: 732px;
-        max-height: 470px;
+        max-height: none;
         overflow: hidden;
     }
 
