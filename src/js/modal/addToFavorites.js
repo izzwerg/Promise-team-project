@@ -1,6 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { renderFilteredFavExercises } from '../../favorites-copy';
+import { renderFilteredFavExercises } from '../../favorites';
 
 function addToFavorites(newExercises) {
   const addBtn = document.querySelector('.addToFavorites');
