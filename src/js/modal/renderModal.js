@@ -86,7 +86,10 @@ function renderExercise(
                     </svg>
                 </button>
                 <button type="button" class="deletedForFavorites">
-                    Remove from favorites
+                    Remove from
+                    <svg class="iconHeart">
+                        <use href="./assets/sprite-a52c12ca.svg#heart"></use>
+                    </svg>
                 </button>
                 <button type="button" class="giveRating" data-id="${exercisesId}">
                     Give a rating
