@@ -172,6 +172,7 @@ function renderFilteredFavExercises() {
       const updatedFavorites = favorites.filter(item => item._id !== itemId);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
       favorites = updatedFavorites;
+      renderFilteredFavExercises();
     });
   });
 }
