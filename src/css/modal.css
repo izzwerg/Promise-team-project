@@ -37,7 +37,6 @@
     align-items: center;
     position: relative;
     height: max-content;
-    width: 335px;
     padding: 40px 20px;
 }
 
@@ -142,8 +141,8 @@
 
 
 .addToFavorites {
-    display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 12px 0;
     height: 48px;
@@ -183,6 +182,7 @@
 .deletedForFavorites {
     display: none;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 48px;
     padding: 12px 0;
@@ -204,6 +204,7 @@
 .giveRating {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 12px 0;
     border: 1px solid var(--black);
@@ -228,6 +229,12 @@
 
 .exitModal .icon {
     stroke: var(--black);
+}
+
+.is_visible_flex {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -289,11 +296,12 @@
 
 @media screen and (min-width: 1440px) {
     .section_modal {
-        width: 732px;
+        max-width: 732px;
         overflow: hidden;
     }
 
     .container_modal {
         max-width: 732px;
+        /* padding: 40px; */
     }
 }
