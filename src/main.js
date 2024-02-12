@@ -165,21 +165,21 @@ async function getFilteredExerrcises() {
   const apiUrl = 'https://energyflow.b.goit.study/api/exercises';
   let filterCheck = document.querySelector('.active');
   let requestData;
-  if (filterCheck.textContent == 'Body parts') {
+  if (currentFilter == 'Body parts') {
     requestData = {
       bodypart: exerciseName,
       limit: setExercisesLimit(),
       page: exercisePage,
     };
   }
-  if (filterCheck.textContent == 'Muscles') {
+  if (currentFilter == 'Muscles') {
     requestData = {
       muscles: exerciseName,
       limit: setExercisesLimit(),
       page: exercisePage,
     };
   }
-  if (filterCheck.textContent == 'Equipment') {
+  if (currentFilter == 'Equipment') {
     requestData = {
       equipment: exerciseName,
       limit: setExercisesLimit(),
@@ -405,7 +405,7 @@ async function performSearch() {
   let requestData;
   const filterCheck = document.querySelector('.active');
 
-  if (filterCheck.textContent == 'Body parts') {
+  if (currentFilter == 'Body parts') {
     requestData = {
       bodypart: exerciseName,
       limit: setExercisesLimit(),
@@ -413,7 +413,7 @@ async function performSearch() {
       subcategory: subcategory, // Додаємо значення підвиду
     };
   }
-  if (filterCheck.textContent == 'Muscles') {
+  if (currentFilter == 'Muscles') {
     requestData = {
       muscles: exerciseName,
       limit: setExercisesLimit(),
@@ -421,7 +421,7 @@ async function performSearch() {
       subcategory: subcategory,
     };
   }
-  if (filterCheck.textContent == 'Equipment') {
+  if (currentFilter == 'Equipment') {
     requestData = {
       equipment: exerciseName,
       limit: setExercisesLimit(),
