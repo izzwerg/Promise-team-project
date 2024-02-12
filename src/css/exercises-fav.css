@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     width: 295px;
-    height: 165px;
+    min-height: 165px;
     padding: 16px;
     margin: 0;
     background-color: #fff;
@@ -144,7 +144,7 @@
 .fav-ex-name-box {
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     margin-bottom: 8px;
 }
 
@@ -170,10 +170,14 @@
         sans-serif;
     font-weight: 400;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 1.2;
     color: #1b1b1b;
     margin: 0;
     margin-left: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 40px);
 }
 
 .fav-ex-desc-list {
@@ -236,7 +240,7 @@
     color: #1b1b1b;
 }
 
-/* .fav-pagination-btn:focus {
+.fav-pagination-btn:focus {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,7 +255,12 @@
     line-height: 160%;
     letter-spacing: 0.04em;
     color: #1b1b1b;
-} */
+}
+
+.fav-pagi-btn-overflow {
+    overflow-x: scroll;
+    justify-content: flex-start;
+}
 
 /* MOBILE */
 
@@ -267,6 +276,7 @@
 
     .fav-box {
         padding: 64px 0;
+        height: 928px;
     }
 
     .fav-ex-tittle {
@@ -297,6 +307,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 14px;
+        max-height: 720px;
+        overflow-y: scroll;
+        margin-top: -110px;
+        align-items: stretch;
     }
 
     .fav-ex-item {
@@ -339,6 +353,10 @@
 
 @media screen and (min-width: 1440px) {
 
+    .fav-box {
+        height: 687px;
+    }
+
     .no-fav-ex-inner {
         margin-top: 114px;
     }
@@ -352,11 +370,15 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
+        max-height: 479px;
+        overflow-y: scroll;
+        margin-top: -50px;
+        align-items: stretch;
     }
 
     .fav-ex-item {
         width: 424px;
-        height: 141px;
+        min-height: 141px;
     }
 
     .fav-ex-item-desk {

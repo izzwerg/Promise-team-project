@@ -3,6 +3,7 @@ function exitModal(modalSection, containerModal, overlay) {
   const exitModalHandler = () => {
     modalSection.classList.remove('is-visible');
     overlay.classList.remove('is-visible');
+    document.body.style.overflow = 'visible';
     containerModal.innerHTML = '';
   };
 

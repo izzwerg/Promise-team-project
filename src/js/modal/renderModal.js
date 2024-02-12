@@ -1,4 +1,12 @@
-import { capitalizeText } from '../../main';
+function capitalizeText(text) {
+  if (!text.length) {
+    return '';
+  }
+  const firstLetter = text.charAt(0);
+  const firstLetterCap = firstLetter.toUpperCase();
+  const remainingLetters = text.slice(1);
+  return firstLetterCap + remainingLetters;
+}
 
 function renderExercise(
   {
@@ -14,7 +22,8 @@ function renderExercise(
   },
   modalSection,
   containerModal,
-  overlay
+  overlay,
+  exercisesId
 ) {
   overlay.classList.add('is-visible');
   modalSection.classList.add('is-visible');
@@ -79,7 +88,7 @@ function renderExercise(
                 <button type="button" class="deletedForFavorites">
                     Remove from favorites
                 </button>
-                <button type="button" class="giveRating">
+                <button type="button" class="giveRating" data-id="${exercisesId}">
                     Give a rating
                 </button>
                 <button type="button" class="exitModal">

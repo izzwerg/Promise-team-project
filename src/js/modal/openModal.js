@@ -18,7 +18,14 @@ export const openModal = () => {
       const overlay = document.querySelector('.overlay');
       try {
         const exerciseData = await searchExercises(exercisesId);
-        renderExercise(exerciseData, modalSection, containerModal, overlay);
+        renderExercise(
+          exerciseData,
+          modalSection,
+          containerModal,
+          overlay,
+          exercisesId
+        );
+        document.body.style.overflow = 'hidden';
         fillStars(exercisesId);
         isObjectInLocalStorage(exercisesId);
         addToFavorites(exerciseData);
