@@ -1,7 +1,7 @@
 import { openModal } from './js/modal/openModal';
 
 function renderFilteredFavExercises() {
-  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   const newData = favorites
     .map(
       item => `<li class="fav-ex-item">
@@ -171,6 +171,7 @@ function renderFilteredFavExercises() {
       // Remove the item from local storage
       const updatedFavorites = favorites.filter(item => item._id !== itemId);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+      favorites = updatedFavorites;
     });
   });
 }
