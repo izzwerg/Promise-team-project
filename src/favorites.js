@@ -169,7 +169,7 @@ function renderFilteredFavExercises() {
       listItem.remove();
 
       // Remove the item from local storage
-      const updatedFavorites = favorites.filter(item => item._id !== itemId);
+      let updatedFavorites = favorites.filter(item => item._id !== itemId);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
       favorites = updatedFavorites;
       renderFilteredFavExercises();
