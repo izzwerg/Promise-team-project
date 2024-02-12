@@ -87,12 +87,6 @@ function renderFilteredFavExercises() {
       const fragment = document.createDocumentFragment();
       const totalPages = Math.ceil(favorites.length / itemsPerPage);
 
-      if (totalPages > 9 && screenWidth < 768) {
-        button.classList.add('fav-pagi-btn-overflow');
-      } else {
-        button.classList.remove('fav-pagi-btn-overflow');
-      }
-
       for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement('button');
         button.classList.add('fav-pagination-btn');
@@ -152,6 +146,11 @@ function renderFilteredFavExercises() {
           favExercisesContainer.innerHTML = slicedDataHTML;
           openModal();
         });
+        if (totalPages > 9 && screenWidth < 768) {
+          button.classList.add('fav-pagi-btn-overflow');
+        } else {
+          button.classList.remove('fav-pagi-btn-overflow');
+        }
         fragment.appendChild(button);
       }
 
