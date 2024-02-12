@@ -134,6 +134,7 @@
   color: var(--white);
   cursor: pointer;
   border: none;
+  transition: background 250ms ease-in-out;
 }
 .footer-button:hover,
 .footer-button:focus {
