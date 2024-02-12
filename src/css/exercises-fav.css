@@ -276,6 +276,7 @@
 
     .fav-box {
         padding: 64px 0;
+        height: 928px;
     }
 
     .fav-ex-tittle {
@@ -351,6 +352,10 @@
 /* DESKTOP */
 
 @media screen and (min-width: 1440px) {
+
+    .fav-box {
+        height: 687px;
+    }
 
     .no-fav-ex-inner {
         margin-top: 114px;
