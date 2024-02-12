@@ -72,40 +72,26 @@
 
 }
 
-/* Основний колір неактивних зірок *//*
-.starability-basic input {
-    color: #1B1B1B33;
-  }
+.starability-basic {
+    color: var(--black); /* Колір неактивних зірок */
+}
+
+.starability-basic:hover {
+    color: var(--orange); /* Колір зірок при наведенні */
+}
+
+.starability-basic input:checked ~ label {
+    color: var(--orange); /* Колір активних зірок після вибору */
+}
   
-  /* Колір активних зірок 
-  .starability-basic input:checked ~ input {
-    color: #EEA10C;
-  }
-  
-   Колір фокусного кільця для активних зірок
-  .starability-basic input:focus ~ input {
-    color: #EEA10C;
-  }
-  
-   Ширина та висота зірок 
-  .starability-basic label {
-    width: 24px; /* Ваш розмір зірки */
-    /* height: 24px; Ваш розмір зірки */
-  /* } */
-  
-   /* Колір тексту номеру рейтингу 
-  .rating-number {
-    color: #1B1B1B;
-  } */ 
-  
+
 .rating-rating{
     text-align: left;
     display: flex;
     gap: 2px;
-    width: 149px;
+    /* width: 149px; */
     height: 24px;
 }
-
 
 
 .rating-number{
