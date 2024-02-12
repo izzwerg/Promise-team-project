@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  padding-bottom: 15px;
 }
 .footer-container {
   background-image: linear-gradient(
@@ -15,8 +16,6 @@
   display: flex;
   flex-wrap: wrap;
   padding: 40px 20px 20px 20px;
-
-  margin-bottom: 15px;
 }
 
 .footer-info {
@@ -112,6 +111,7 @@
   font-size: 14px;
   line-height: 129%;
   color: rgba(246, 246, 246, 0.6);
+  transition: border 250ms ease-in-out;
 }
 .footer-input:hover,
 .footer-input:focus {
@@ -133,6 +133,7 @@
   color: var(--white);
   cursor: pointer;
   border: none;
+  transition: background 250ms ease-in-out;
 }
 .footer-button:hover,
 .footer-button:focus {
