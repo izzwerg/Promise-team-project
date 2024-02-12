@@ -1,12 +1,14 @@
+.muscles-list {
+  width: 100%;
+}
+
+
+
 /* MOBILE EXRECISES */
 @media screen and (max-width: 767.9px) {
   .container {
     min-width: 335px;
     max-width: 100%;
-  }
-
-  .exercises-section {
-    margin-bottom: 16px;
   }
 
   .exercises-wrapper {
@@ -335,6 +337,7 @@
     border: none;
     border-radius: 30px;
   }
+
   .no-search-server {
     font-family: DM Sans, sans-serif;
     color: var(--black);
@@ -371,7 +374,7 @@
     justify-content: center;
     gap: 32px;
     padding: 64px 48px;
-    margin-bottom: 16px;
+
   }
 
   .exercises-title {
@@ -691,6 +694,7 @@
     border: none;
     border-radius: 30px;
   }
+
   .no-search-server {
     font-family: DM Sans, sans-serif;
     color: var(--black);
@@ -716,6 +720,7 @@
     color: var(--grey);
     font-weight: 400;
   }
+
   .wrapper-exercises {
     display: flex;
     justify-content: center;
@@ -1050,6 +1055,7 @@
     border: none;
     border-radius: 30px;
   }
+
   .no-search-server {
     font-family: DM Sans, sans-serif;
     color: var(--black);
@@ -1074,6 +1080,7 @@
     color: var(--grey);
     font-weight: 400;
   }
+
   .wrapper-exercises {
     display: flex;
     justify-content: center;
@@ -1101,4 +1108,8 @@
 .pagination-number:hover {
   cursor: pointer;
 
+}
+
+.exercises-section .container {
+  padding-bottom: 16px;
 }
