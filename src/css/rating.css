@@ -37,7 +37,6 @@
     overflow: auto;
     background-color: var(--white);
     border-radius: 20px;
-    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     padding: 40px 20px;
 }
 
@@ -63,7 +62,7 @@
     border-radius: 30px;
 }
 
-
+ 
 .rating-title{
     color: #1B1B1B99;
     font-size: 12px;
@@ -73,25 +72,41 @@
 
 }
 
-
+/* Основний колір неактивних зірок *//*
+.starability-basic input {
+    color: #1B1B1B33;
+  }
+  
+  /* Колір активних зірок 
+  .starability-basic input:checked ~ input {
+    color: #EEA10C;
+  }
+  
+   Колір фокусного кільця для активних зірок
+  .starability-basic input:focus ~ input {
+    color: #EEA10C;
+  }
+  
+   Ширина та висота зірок 
+  .starability-basic label {
+    width: 24px; /* Ваш розмір зірки */
+    /* height: 24px; Ваш розмір зірки */
+  /* } */
+  
+   /* Колір тексту номеру рейтингу 
+  .rating-number {
+    color: #1B1B1B;
+  } */ 
+  
 .rating-rating{
     text-align: left;
     display: flex;
     gap: 2px;
-
-
+    width: 149px;
+    height: 24px;
 }
 
-/* .rating-star-list {
-    display: flex;
-    fill: #1B1B1B33;
-    gap: 2px;
-} */
 
-/* .color-star{
-    fill: var(--orange);
-    visibility: hidden;
-} */
 
 .rating-number{
     font-size: 12px;

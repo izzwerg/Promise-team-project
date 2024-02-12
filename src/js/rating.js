@@ -1,24 +1,40 @@
-import $ from 'jquery';
-window.jQuery = $; // Додайте цей рядок, щоб зробити jQuery доступним глобально
-import 'rateyo';
 
-// Ваша подальша логіка з ініціалізацією rateYo
-$(function () {
-  $("#rateYo").rateYo({
-    onChange: function (rating, rateYoInstance) {
-      $(this).next().text(rating);
-    }
-  });
-});
+import 'starability/starability-css/starability-basic.css';
+import Starability from 'starability';
 
 
 const STORAGE_KEY = "feedback-form-state";
 const form = document.querySelector(".rating-form");
 const emailInput = document.querySelector(".rating-input-email");
 const messageTextarea = document.querySelector(".rating-input-textaera");
+const closeBottom = document.querySelector(".rating-close");
 
 form.addEventListener("input", onFormInput);
 form.addEventListener("submit", onFormSubmit);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const starabilityElement = document.querySelector('.starability-basic');
+  const ratingNumberElement = document.querySelector('.rating-number');
+
+  const starability = new Starability(starabilityElement, {
+    starSize: 24, 
+  });
+
+
+  starability.on('change', function(currentRating, rating) {
+    ratingNumberElement.textContent = rating.toFixed(1);
+  });
+});
+
+
+
+closeBottom.addEventListener("click", function(){
+   const Backdrop = document.querySelector(".backdrop");
+   Backdrop.classList.remove("is-open");
+});
+
+
 
 function onFormSubmit(event){
     event.preventDefault();
