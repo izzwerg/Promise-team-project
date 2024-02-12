@@ -15,7 +15,6 @@
   display: flex;
   flex-wrap: wrap;
   padding: 40px 20px 20px 20px;
-
   margin-bottom: 15px;
 }
 
@@ -113,6 +112,7 @@
   font-size: 14px;
   line-height: 129%;
   color: rgba(246, 246, 246, 0.6);
+  transition: border 250ms ease-in-out;
 }
 .footer-input:hover,
 .footer-input:focus {
@@ -152,6 +152,7 @@
   line-height: 83%;
   letter-spacing: -0.02em;
   color: var(--white);
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer-container {
