@@ -11,8 +11,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 export const openModal = () => {
   const startButtons = document.querySelectorAll('.filtered-start-ex-btn');
   startButtons.forEach(item => {
-    item.addEventListener('click', async event => {
-      const exercisesId = event.target.dataset.id;
+    item.addEventListener('click', async () => {
+      const exercisesId = item.dataset.id;
       const modalSection = document.querySelector('.section_modal');
       const containerModal = document.querySelector('.container_modal');
       const overlay = document.querySelector('.overlay');
