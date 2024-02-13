@@ -1,6 +1,5 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { renderFilteredFavExercises } from '../../favorites';
 
 function addToFavorites(newExercises) {
   const addBtn = document.querySelector('.addToFavorites');
@@ -21,7 +20,6 @@ function addToFavorites(newExercises) {
     iziToast.info({
       message: 'Вправу додано до улюблених!',
     });
-    renderFilteredFavExercises();
   };
 
   addBtn.addEventListener('click', addHandler);

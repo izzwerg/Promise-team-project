@@ -1,6 +1,5 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { renderFilteredFavExercises } from '../../favorites';
 
 function deleteForFavorites(deletedObject) {
   const addBtn = document.querySelector('.addToFavorites');
@@ -22,7 +21,6 @@ function deleteForFavorites(deletedObject) {
     iziToast.info({
       message: 'Вправу видалено з улюблених!',
     });
-    renderFilteredFavExercises();
   };
 
   delBtn.addEventListener('click', delHandler);
