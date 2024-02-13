@@ -70,6 +70,9 @@
   opacity: 0.8;
   transition: fill 250ms ease-in-out;
 }
+.footer-block-second {
+  margin-bottom: 60px;
+}
 .footer-text {
   font-size: 32px;
   line-height: 100%;
@@ -84,7 +87,6 @@
 .footer-subscribe {
   width: 295px;
   height: 134px;
-  margin-bottom: 60px;
 }
 .footer-subscribe-text {
   font-size: 14px;
@@ -192,10 +194,12 @@
     width: 28px;
     height: 28px;
   }
+  .footer-block-second {
+    margin-bottom: 120px;
+  }
   .footer-subscribe {
     width: 352px;
     height: 160px;
-    margin-bottom: 120px;
   }
   .footer-subscribe-text {
     font-size: 18px;
@@ -257,8 +261,10 @@
     line-height: 97%;
     max-width: 488px;
   }
-  .footer-subscribe {
+  .footer-block-second {
     margin-bottom: 186px;
+  }
+  .footer-subscribe {
     margin-left: 160px;
   }
   .footer-privacy {
