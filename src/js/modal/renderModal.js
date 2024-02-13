@@ -39,19 +39,19 @@ function renderExercise(
                 <p>${Number(rating).toFixed(1)}</p>
                 <div class="stars">
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                        <use href="./assets/sprite-fb630926.svg#star"></use>
                     </svg>
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                        <use href="./assets/sprite-fb630926.svg#star"></use>
                     </svg>
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                        <use href="./assets/sprite-fb630926.svg#star"></use>
                     </svg>
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                        <use href="./assets/sprite-fb630926.svg#star"></use>
                     </svg>
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                        <use href="./assets/sprite-fb630926.svg#star"></use>
                     </svg>
                 </div>
             </div>
@@ -82,13 +82,13 @@ function renderExercise(
                 <button type="button" class="addToFavorites">
                     Add to favorites
                     <svg class="iconHeart">
-                        <use href="./assets/sprite-a52c12ca.svg#heart"></use>
+                        <use href="./assets/sprite-fb630926.svg#heart"></use>
                     </svg>
                 </button>
                 <button type="button" class="deletedForFavorites">
                     Remove from
                     <svg class="iconHeart">
-                        <use href="./assets/sprite-a52c12ca.svg#heart"></use>
+                        <use href="./assets/sprite-fb630926.svg#heart"></use>
                     </svg>
                 </button>
                 <button type="button" class="giveRating" data-id="${exercisesId}">
@@ -96,7 +96,7 @@ function renderExercise(
                 </button>
                 <button type="button" class="exitModal">
                     <svg class="icon">
-                        <use href="./assets/sprite-a52c12ca.svg#close"></use>
+                        <use href="./assets/sprite-fb630926.svg#close"></use>
                     </svg>
                 </button>
             </div>

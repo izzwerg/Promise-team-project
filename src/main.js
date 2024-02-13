@@ -227,7 +227,7 @@ function renderFilteredExercises() {
               )}</p>
               <div class="filtered-rating-icon-container">
               <svg class="filtered-rating-icon" width="14" height="14">
-                  <use href="./assets/sprite-a52c12ca.svg#star"></use>
+                  <use href="./assets/sprite-fb630926.svg#star"></use>
               </svg>
               </div>
           </div>
@@ -235,14 +235,14 @@ function renderFilteredExercises() {
             item._id
           }">Start
               <svg class="filtered-start-arrow-icon" width="14" height="14">
-                  <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
+                  <use href="./assets/sprite-fb630926.svg#arrow"></use>
               </svg>
           </button>
       </div>
       <div class="filtered-ex-name-box">
           <div class="filtered-run-icon-box">
               <svg class="filtered-run-icon" width="16" height="16">
-                  <use href="./assets/sprite-a52c12ca.svg#runner"></use>
+                  <use href="./assets/sprite-fb630926.svg#runner"></use>
               </svg>
           </div>
           <p class="filtered-ex-name">${capitalizeText(item.name)}</p>

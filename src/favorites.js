@@ -11,21 +11,21 @@ function renderFilteredFavExercises() {
           </div>
           <button class="fav-delete-btn" type="submit">
                 <svg class="fav-delete-icon" width="16" height="16">
-                    <use href="./assets/sprite-a52c12ca.svg#trash"></use>
+                    <use href="./assets/sprite-fb630926.svg#trash"></use>
                 </svg>
           </button>
           <button class="fav-start-ex-btn filtered-start-ex-btn" type="button" data-id="${
             item._id
           }">Start
               <svg class="fav-start-arrow-icon" width="14" height="14">
-                  <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
+                  <use href="./assets/sprite-fb630926.svg#arrow"></use>
               </svg>
           </button>
       </div>
       <div class="fav-ex-name-box">
           <div class="fav-run-icon-box">
               <svg class="fav-run-icon" width="16" height="16">
-                  <use href="./assets/sprite-a52c12ca.svg#runner"></use>
+                  <use href="./assets/sprite-fb630926.svg#runner"></use>
               </svg>
           </div>
           <p class="fav-ex-name">${capitalizeText(item.name)}</p>
@@ -104,21 +104,21 @@ function renderFilteredFavExercises() {
                   </div>
                   <button class="fav-delete-btn" type="submit">
                         <svg class="fav-delete-icon" width="16" height="16">
-                            <use href="./assets/sprite-a52c12ca.svg#trash"></use>
+                            <use href="./assets/sprite-fb630926.svg#trash"></use>
                         </svg>
                   </button>
                   <button class="fav-start-ex-btn filtered-start-ex-btn" type="button" data-id="${
                     item._id
                   }">Start
                       <svg class="fav-start-arrow-icon" width="14" height="14">
-                          <use href="./assets/sprite-a52c12ca.svg#arrow"></use>
+                          <use href="./assets/sprite-fb630926.svg#arrow"></use>
                       </svg>
                   </button>
               </div>
               <div class="fav-ex-name-box">
                   <div class="fav-run-icon-box">
                       <svg class="fav-run-icon" width="16" height="16">
-                          <use href="./assets/sprite-a52c12ca.svg#runner"></use>
+                          <use href="./assets/sprite-fb630926.svg#runner"></use>
                       </svg>
                   </div>
                   <p class="fav-ex-name">${capitalizeText(item.name)}</p>
