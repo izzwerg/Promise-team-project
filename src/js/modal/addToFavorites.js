@@ -18,7 +18,7 @@ function addToFavorites(newExercises) {
     delBtn.classList.remove('is-hidden');
     delBtn.classList.add('is_visible_flex');
     iziToast.info({
-      message: 'Вправу додано до улюблених!',
+      message: 'Exercise added to your favorites',
     });
   };
 

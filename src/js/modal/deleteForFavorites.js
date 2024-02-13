@@ -19,7 +19,7 @@ function deleteForFavorites(deletedObject) {
     delBtn.classList.remove('is_visible_flex');
     delBtn.classList.add('is-hidden');
     iziToast.info({
-      message: 'Вправу видалено з улюблених!',
+      message: 'Exercise removed from your favorites',
     });
   };
 

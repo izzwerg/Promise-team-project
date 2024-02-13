@@ -55,12 +55,12 @@ export function ratingWindow() {
             formData
           );
           iziToast.info({
-            message:'Рейтинг оновлено!'
+            message:'Rating has been updated'
         })
 
         } catch (error) {
           iziToast.error({
-            message: `Такий e-mail вже використано!`,
+            message: `This email has already been used`,
           });
 
         }

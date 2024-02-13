@@ -154,7 +154,6 @@ function renderFilteredFavExercises() {
 
               // Remove the item from the list
               listItem.remove();
-
               // Remove the item from local storage
               let updatedFavorites = favorites.filter(
                 item => item._id !== itemId
@@ -164,6 +163,7 @@ function renderFilteredFavExercises() {
                 JSON.stringify(updatedFavorites)
               );
               favorites = updatedFavorites;
+              
               renderFilteredFavExercises();
             });
           });
