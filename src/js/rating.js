@@ -19,10 +19,11 @@ let exerciseId
   // // Отримання ID вправи (наприклад, exerciseId з дата-атрибута кнопки "гів рейтинг")
   // const exerciseId = document.querySelector('.giveRating').getAttribute('data-exercise-id');
 
-  openRating.addEventListener("click", function (event) {
+  openRating.addEventListener("click", function () {
     Backdrop.classList.add('is-open');
     modalWindov.classList.remove('is-visible');
-    exerciseId = event.target.dataset.id;
+    exerciseId = openRating.dataset.id;
+    console.log(exerciseId)
   });
 
   // function openRatingFunction(){
@@ -52,8 +53,8 @@ let exerciseId
     ) {
       const formData = {
         email: emailInput.value,
-        message: messageTextarea.value,
-        rating: getSelectedRating(),
+        review: messageTextarea.value,
+        rate: Number(getSelectedRating()),
       };
 
       async function sendPatchRequest(exercisesId, formData) {
@@ -76,7 +77,7 @@ let exerciseId
       // } catch (error) {
       //   console.error('Помилка PATCH-запиту:', error.response ? error.response.data : error.message);
       // }
-      sendPatchRequest(exercisesId, formData)
+      sendPatchRequest(exerciseId, formData)
 
       form.reset();
       clearRatingSelection();
