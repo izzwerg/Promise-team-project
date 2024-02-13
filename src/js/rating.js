@@ -1,5 +1,6 @@
+import iziToast from 'izitoast';
 import axios from 'axios';
-// import { openModal } from "./modal/openModal";
+
 export function ratingWindow() {
   const STORAGE_KEY = 'feedback-form-state';
   const form = document.querySelector('.rating-form');
@@ -16,19 +17,11 @@ export function ratingWindow() {
   form.addEventListener('input', onFormInput);
   form.addEventListener('submit', onFormSubmit);
 
-  // // Отримання ID вправи (наприклад, exerciseId з дата-атрибута кнопки "гів рейтинг")
-  // const exerciseId = document.querySelector('.giveRating').getAttribute('data-exercise-id');
-
   openRating.addEventListener('click', function () {
     Backdrop.classList.add('is-open');
     modalWindov.classList.remove('is-visible');
     exerciseId = openRating.dataset.id;
-    console.log(exerciseId);
   });
-
-  // function openRatingFunction(){
-  //   Backdrop.classList.add("is-open");
-  // };
 
   closeBottom.addEventListener('click', function () {
     Backdrop.classList.remove('is-open');
@@ -61,26 +54,25 @@ export function ratingWindow() {
             `https://energyflow.b.goit.study/api/exercises/${exercisesId}/rating`,
             formData
           );
-          console.log('Успішно відправлено PATCH-запит');
+          iziToast.info({
+            message:'Рейтинг оновлено!'
+        })
+
         } catch (error) {
-          console.error(
-            'Помилка PATCH-запиту:',
-            error.response ? error.response.data : error.message
-          );
+          iziToast.error({
+            message: `PATCH error`,
+          });
+
         }
       }
-      // try {
-      //   const response = await axios.patch(`https://energyflow.b.goit.study/api/exercises/${exercisesId}}/rating`, formData);
-      //   console.log('ваш запинт виконано успішно', response.data);   // де ехісайс  треба айді
-      // } catch (error) {
-      //   console.error('Помилка PATCH-запиту:', error.response ? error.response.data : error.message);
-      // }
+
       sendPatchRequest(exerciseId, formData);
 
       form.reset();
       clearRatingSelection();
       ratingNumber.textContent = '0.0';
       localStorage.removeItem(STORAGE_KEY);
+      Backdrop.classList.remove('is-open');
 
       stars.forEach(star => {
         if (!star.checked) {
@@ -88,7 +80,9 @@ export function ratingWindow() {
         }
       });
     } else {
-      alert('All fields must be filled \n (Усі поля повинні бути заповнені)');
+      iziToast.error({
+        message: 'Необхідно поставити оцінку!',
+      });
     }
   }
 
