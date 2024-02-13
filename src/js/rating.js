@@ -8,8 +8,8 @@ export function ratingWindow() {
   const closeBottom = document.querySelector('.rating-close');
   const openRating = document.querySelector('.giveRating');
   const Backdrop = document.querySelector('.backdrop');
-  const modalWindov = document.querySelector('.section_modal')
-let exerciseId
+  const modalWindov = document.querySelector('.section_modal');
+  let exerciseId;
   const stars = document.querySelectorAll('.rating-star-form input');
   const ratingNumber = document.querySelector('.rating-number');
 
@@ -19,11 +19,11 @@ let exerciseId
   // // Отримання ID вправи (наприклад, exerciseId з дата-атрибута кнопки "гів рейтинг")
   // const exerciseId = document.querySelector('.giveRating').getAttribute('data-exercise-id');
 
-  openRating.addEventListener("click", function () {
+  openRating.addEventListener('click', function () {
     Backdrop.classList.add('is-open');
     modalWindov.classList.remove('is-visible');
     exerciseId = openRating.dataset.id;
-    console.log(exerciseId)
+    console.log(exerciseId);
   });
 
   // function openRatingFunction(){
@@ -77,7 +77,7 @@ let exerciseId
       // } catch (error) {
       //   console.error('Помилка PATCH-запиту:', error.response ? error.response.data : error.message);
       // }
-      sendPatchRequest(exerciseId, formData)
+      sendPatchRequest(exerciseId, formData);
 
       form.reset();
       clearRatingSelection();
