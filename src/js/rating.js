@@ -1,3 +1,5 @@
+import axios from "axios";
+import { openModal } from "./modal/openModal";
 
 const STORAGE_KEY = "feedback-form-state";
 const form = document.querySelector(".rating-form");
@@ -12,14 +14,14 @@ const ratingNumber = document.querySelector(".rating-number");
 form.addEventListener("input", onFormInput);
 form.addEventListener("submit", onFormSubmit);
 
+  // // Отримання ID вправи (наприклад, exerciseId з дата-атрибута кнопки "гів рейтинг")
+  // const exerciseId = document.querySelector('.giveRating').getAttribute('data-exercise-id');
 
+// openRating.addEventListener("click", openRatingFunction);
 
-
-openRating.addEventListener("click", openRatingFunction);
-
-function openRatingFunction(){
-  Backdrop.classList.add("is-open");
-};
+// function openRatingFunction(){
+//   Backdrop.classList.add("is-open");
+// };
 
 
 
@@ -42,15 +44,31 @@ stars.forEach((star) => {
 
 
 
-function onFormSubmit(event){
+async function onFormSubmit(event){
   event.preventDefault();
 
-  if (emailInput.value !== "" && messageTextarea.value !== "") {
+
+  if (emailInput.value !== "" && messageTextarea.value !== "" && getSelectedRating() !== null) {
     const formData = {
       email: emailInput.value,
       message: messageTextarea.value,
       rating: getSelectedRating(),
     };
+
+  async function sendPatchRequest({exercisesId}, formData) {
+    try {
+      await axios.patch(`https://energyflow.b.goit.study/api/exercises/${exercisesId}/rating`, formData);
+        console.log('Успішно відправлено PATCH-запит');
+    } catch (error) {
+        console.error('Помилка PATCH-запиту:', error.response ? error.response.data : error.message);
+    }
+}
+    // try {
+    //   const response = await axios.patch(`https://energyflow.b.goit.study/api/exercises/${exercisesId}}/rating`, formData);
+    //   console.log('ваш запинт виконано успішно', response.data);   // де ехісайс  треба айді
+    // } catch (error) {
+    //   console.error('Помилка PATCH-запиту:', error.response ? error.response.data : error.message);
+    // }
 
     form.reset();
     clearRatingSelection();
@@ -66,8 +84,6 @@ function onFormSubmit(event){
     alert("All fields must be filled \n (Усі поля повинні бути заповнені)");
   }
 }
-
-
 
 
 function onFormInput() {
@@ -120,10 +136,14 @@ function populateFormFields() {
       const selectedStar = document.querySelector(`.rating-star-form input[value="${rating}"]`);
       if (selectedStar) {
         selectedStar.checked = true;
-        ratingNumber.textContent = `${rating}.0`;
+        ratingNumber.textContent = Number(`${rating}.toFixed(1)`);
       }
     }
   }
 }
-
 populateFormFields();
+
+
+
+
+
