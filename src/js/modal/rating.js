@@ -60,7 +60,7 @@ export function ratingWindow() {
 
         } catch (error) {
           iziToast.error({
-            message: `PATCH error`,
+            message: `Такий e-mail вже використано!`,
           });
 
         }
@@ -80,9 +80,9 @@ export function ratingWindow() {
         }
       });
     } else {
-      iziToast.error({
-        message: 'Необхідно поставити оцінку!',
-      });
+      // iziToast.error({
+      //   message: 'Необхідно поставити оцінку!',
+      // });
     }
   }
 
