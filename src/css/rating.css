@@ -19,6 +19,7 @@
     height: 100%;
     visibility: hidden;
     pointer-events: none;
+    z-index: 200;
 }
 
 .is-open {

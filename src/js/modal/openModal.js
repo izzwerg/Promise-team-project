@@ -5,6 +5,7 @@ import { deleteForFavorites } from './deleteForFavorites';
 import { exitModal } from './exitModal';
 import { isObjectInLocalStorage } from './isObjectInLocalStorage';
 import { fillStars } from './fillStars';
+import { ratingWindow } from '../rating';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -31,6 +32,7 @@ export const openModal = () => {
         addToFavorites(exerciseData);
         deleteForFavorites(exerciseData);
         exitModal(modalSection, containerModal, overlay);
+        ratingWindow();
       } catch (error) {
         console.log(error);
         iziToast.error({
