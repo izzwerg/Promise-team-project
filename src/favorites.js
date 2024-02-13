@@ -1,6 +1,7 @@
 import { openModal } from './js/modal/openModal';
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
 function renderFilteredFavExercises() {
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   const newData = favorites
     .map(
       item => `<li class="fav-ex-item">
@@ -209,7 +210,6 @@ export function capitalizeText(text) {
 }
 
 renderFilteredFavExercises();
-// export { renderFilteredFavExercises };
 
 let originalSetItem = localStorage.setItem;
 
@@ -223,7 +223,6 @@ localStorage.setItem = function (key, value) {
 
 function changeHandler() {
   const timerId = setTimeout(() => {
-    favorites = JSON.parse(localStorage.getItem('favorites'));
     renderFilteredFavExercises();
   }, 200);
 }
