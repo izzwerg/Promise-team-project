@@ -2,8 +2,6 @@
   width: 100%;
 }
 
-
-
 /* MOBILE EXRECISES */
 @media screen and (max-width: 767.9px) {
   .container {
@@ -72,8 +70,10 @@
     justify-content: center;
     position: relative;
     margin: 0;
-    background-image: linear-gradient(rgba(16, 16, 16, 0.7),
-        rgba(16, 16, 16, 0.7)),
+    background-image: linear-gradient(
+        rgba(16, 16, 16, 0.7),
+        rgba(16, 16, 16, 0.7)
+      ),
       url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
     border-radius: 12px;
     background-position: center;
@@ -142,7 +142,6 @@
     min-width: 32px;
     height: 32px;
   }
-
 
   .exercises-title-grey {
     font-weight: 400;
@@ -348,14 +347,11 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.01em;
-
-
   }
 
   .no-search-server:last-child {
     margin-bottom: 320px;
     font-weight: 400;
-
   }
 
   .gray-world-server {
@@ -374,7 +370,6 @@
     justify-content: center;
     gap: 32px;
     padding: 64px 48px;
-
   }
 
   .exercises-title {
@@ -428,8 +423,10 @@
     justify-content: center;
     position: relative;
     margin: 0;
-    background-image: linear-gradient(rgba(16, 16, 16, 0.7),
-        rgba(16, 16, 16, 0.7)),
+    background-image: linear-gradient(
+        rgba(16, 16, 16, 0.7),
+        rgba(16, 16, 16, 0.7)
+      ),
       url('../img/7de47efb64b4441322cd1f008dd1f1b6.jpg');
     border-radius: 12px;
     background-position: center;
@@ -498,7 +495,6 @@
     min-width: 32px;
     height: 32px;
   }
-
 
   .exercises-title-grey {
     font-weight: 400;
@@ -705,15 +701,11 @@
     font-weight: 500;
     font-size: 18px;
     letter-spacing: -0.01em;
-
-
-
   }
 
   .no-search-server:last-child {
     margin-bottom: 485px;
     font-weight: 400;
-
   }
 
   .gray-world-server {
@@ -724,7 +716,6 @@
   .wrapper-exercises {
     display: flex;
     justify-content: center;
-
   }
 }
 
@@ -846,8 +837,6 @@
   .pagination-number {
     color: rgba(27, 27, 27, 0.4);
   }
-
-
 
   .pagination-number.active {
     color: var(--black);
@@ -994,7 +983,6 @@
     color: #1b1b1b;
     margin: 0;
 
-
     white-space: nowrap;
     /* Скасуємо перенесення тексту */
     overflow: hidden;
@@ -1066,14 +1054,10 @@
     font-weight: 500;
     font-size: 18px;
     letter-spacing: -0.01em;
-
-
-
   }
 
   .no-search-server:last-child {
     margin-bottom: 288px;
-
   }
 
   .gray-world-server {
@@ -1084,7 +1068,6 @@
   .wrapper-exercises {
     display: flex;
     justify-content: center;
-
   }
 }
 
@@ -1107,7 +1090,6 @@
 
 .pagination-number:hover {
   cursor: pointer;
-
 }
 
 .exercises-section .container {

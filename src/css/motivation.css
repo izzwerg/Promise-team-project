@@ -1,128 +1,128 @@
 /* Mobile */
 .motivation {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .motivation-container {
-    min-width: 320px;
+  min-width: 320px;
 }
 
 .motivation-image-block {
-    display: flex;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 30px;
-    height: 269px;
-    background-image: url(/img/mobile/block3_mob.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  height: 269px;
+  background-image: url(/img/mobile/block3_mob.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (min-resolution: 192dpi) {
-    .motivation-image-block {
-        background-image: url(/img/mobile/block3_mob@2x.jpg);
-    }
+  .motivation-image-block {
+    background-image: url(/img/mobile/block3_mob@2x.jpg);
+  }
 }
 
 .motivation-text-block {
-    display: flex;
-    gap: 18px;
-    padding: 40px 20px;
-    border-radius: 30px;
-    background: #1B1B1B;
+  display: flex;
+  gap: 18px;
+  padding: 40px 20px;
+  border-radius: 30px;
+  background: #1b1b1b;
 }
 
 .motivation-icon-block {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    background: rgba(246, 246, 246, 0.1);
-    border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(246, 246, 246, 0.1);
+  border-radius: 50%;
 }
 
 .motivation-svg {
-    width: 20px;
-    height: 20px;
-    fill: #F6F6F6;
+  width: 20px;
+  height: 20px;
+  fill: #f6f6f6;
 }
 
 .motivation-headline {
-    padding-bottom: 2px;
-    color: #F6F6F6;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
+  padding-bottom: 2px;
+  color: #f6f6f6;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .motivation-paragraph-item {
-    color: rgba(246, 246, 246, 0.6);
-    font-size: 14px;
-    line-height: 1.3;
+  color: rgba(246, 246, 246, 0.6);
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .motivation-paragraph-item.first-p {
-    margin-bottom: 14px;
+  margin-bottom: 14px;
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-    .motivation {
-        padding-bottom: 16px;
-    }
+  .motivation {
+    padding-bottom: 16px;
+  }
 
+  .motivation-image-block {
+    width: 736px;
+    height: 302px;
+    border-radius: 50px;
+    background-image: url(/img/tablet/block3_tab.jpg);
+  }
+
+  @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .motivation-image-block {
-        width: 736px;
-        height: 302px;
-        border-radius: 50px;
-        background-image: url(/img/tablet/block3_tab.jpg);
+      background-image: url(/img/tablet/block3_tab@2x.jpg);
     }
+  }
 
-    @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-        .motivation-image-block {
-            background-image: url(/img/tablet/block3_tab@2x.jpg);
-        }
-    }
+  .motivation-text-block {
+    padding: 64px;
+    border-radius: 50px;
+  }
 
-    .motivation-text-block {
-        padding: 64px;
-        border-radius: 50px;
-    }
+  .motivation-headline {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
 
-    .motivation-headline {
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.3;
-    }
+  .motivation-paragraph-item.first-p {
+    padding-bottom: 11px;
+    font-size: 14px;
+  }
 
-    .motivation-paragraph-item.first-p {
-        padding-bottom: 25px;
-        font-size: 14px;
-    }
-
-    .motivation-paragraph-item.second-p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
+  .motivation-paragraph-item.second-p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 /* Desktop 1440 */
 @media screen and (min-width: 1440px) {
-    .container.motivation-container {
-        display: flex;
-    }
+  .container.motivation-container {
+    display: flex;
+  }
 
+  .motivation-image-block {
+    width: 704px;
+    background-image: url(/img/desktop/block3_desk.jpg);
+  }
+
+  @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
     .motivation-image-block {
-        width: 704px;
-        background-image: url(/img/desktop/block3_desk.jpg);
+      background-image: url(/img/desktop/block3_desk@2x.jpg);
     }
-
-    @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-        .motivation-image-block {
-            background-image: url(/img/desktop/block3_desk@2x.jpg);
-        }
-    }
+  }
 }
