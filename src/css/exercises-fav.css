@@ -346,7 +346,7 @@
 
 @media screen and (min-width: 1440px) {
   .fav-box {
-    height: 687px;
+    height: 746px;
   }
 
   .no-fav-ex-inner {
@@ -362,7 +362,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    max-height: 479px;
+    max-height: 530px;
     overflow-y: scroll;
     margin-top: -50px;
     align-items: stretch;
