@@ -47,8 +47,6 @@ export function ratingWindow() {
     event.preventDefault();
 
     if (
-      emailInput.value !== '' &&
-      messageTextarea.value !== '' &&
       getSelectedRating() !== null
     ) {
       const formData = {
