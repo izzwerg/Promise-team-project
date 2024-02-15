@@ -1,4 +1,6 @@
 import { openModal } from './js/modal/openModal';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 function renderFilteredFavExercises() {
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -163,7 +165,6 @@ function renderFilteredFavExercises() {
                 JSON.stringify(updatedFavorites)
               );
               favorites = updatedFavorites;
-              
               renderFilteredFavExercises();
             });
           });
@@ -194,6 +195,9 @@ function renderFilteredFavExercises() {
       let updatedFavorites = favorites.filter(item => item._id !== itemId);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
       favorites = updatedFavorites;
+      iziToast.info({
+        message: 'Exercise removed from your favorites',
+      });
       renderFilteredFavExercises();
     });
   });
