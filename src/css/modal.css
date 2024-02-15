@@ -40,8 +40,27 @@
   z-index: 2;
   overflow-y: auto;
   animation: fadeIn 0.3s ease forwards;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
   margin: auto;
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.section_modal.closing {
+  animation: fadeOut 0.3s ease forwards;
+}
+
 
 .container_modal {
   display: flex;
