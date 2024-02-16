@@ -142,3 +142,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--dark-grey);
 }
+
+/* izitoast fix */
+
+.iziToast-color-blue {
+  background: var(--dark-grey); 
+  border-color: var(--dark-grey);
+  opacity: 0.8;
+}
+
+.iziToast-close {
+  background: url(./assets/sprite-fb630926.svg#close) no-repeat 50% 50%;
+  stroke: var(--white);
+}
+
+.iziToast>.iziToast-body .iziToast-icon.ico-info {
+  background: url(./assets/sprite-fb630926.svg#runner) no-repeat 50% 50%;
+  background-size: 85%;
+  fill: var(--white);
+}
+
+.iziToast-message {
+  color: var(--white);
+}
+
+.iziToast-title {
+  color: var(--white);
+}
