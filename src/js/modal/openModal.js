@@ -1,4 +1,4 @@
-import { searchExercises } from './fetcher';
+import { searchExercises } from './fetch';
 import { renderExercise } from './renderModal';
 import { addToFavorites } from './addToFavorites';
 import { deleteForFavorites } from './deleteForFavorites';

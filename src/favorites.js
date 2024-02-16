@@ -75,6 +75,7 @@ function renderFilteredFavExercises() {
 
   if (favorites.length === 0) {
     if (noFavExercisesContainer) {
+      favExercisesContainer.innerHTML = '';
       noFavExercisesContainer.innerHTML = noFavExercisesHTML;
     }
   } else {
