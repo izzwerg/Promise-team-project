@@ -80,6 +80,7 @@ function renderFilteredFavExercises() {
     }
   } else {
     if (favExercisesContainer) {
+      noFavExercisesContainer.innerHTML = '';
       favExercisesContainer.innerHTML = newData;
       openModal();
     }
