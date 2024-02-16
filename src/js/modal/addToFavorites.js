@@ -17,7 +17,7 @@ function addToFavorites(newExercises) {
     addBtn.classList.add('is-hidden');
     delBtn.classList.remove('is-hidden');
     delBtn.classList.add('is_visible_flex');
-    iziToast.info({
+    iziToast.success({
       message: 'Exercise added to your favorites',
     });
   };
